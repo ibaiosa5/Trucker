@@ -1,6 +1,5 @@
-{ "conductor" : {
-        "idConductor" : "00001",
-        "nombre" : "Bartolo",
-        "apellido" : "Santxez"
-    }
+{
+    "idConductor" : "00001",
+    "nombre" : "Bartolo",
+    "apellido" : "Santxez"
 }

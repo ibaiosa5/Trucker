@@ -1,18 +1,17 @@
-$(function(){
-   // var verificaPosicion = function(){
+var APP = APP || {};
+
+APP.verificarEstado = (function(){
+    var posicion = function(){
         var options = {
-          enableHighAccuracy: true,
-          timeout: 5000,
+          enableHighAccuracy: false,
+          timeout: 25000,
           maximumAge: 0
         };
 
         function success(pos) {
           var crd = pos.coords;
-
-          console.log('Your current position is:');
-          console.log('Latitude : ' + crd.latitude);
-          console.log('Longitude: ' + crd.longitude);
-          console.log('More or less ' + crd.accuracy + ' meters.');
+          console.log('Latitud : ' + crd.latitude);
+          console.log('Longitud: ' + crd.longitude);
         }
 
         function error(err) {
@@ -20,6 +19,20 @@ $(function(){
         }
 
         navigator.geolocation.getCurrentPosition(success, error, options);
-  //  };
+        //guardarPosicion(pos.coords)
+    };
+    var leerRuta = function(){
 
+    };
+    /*
+    var guardarPosicion=function(){
+      ruta.push(pos.coords);
+    };*/
+
+
+    return {
+      posicion : posicion
+    };
 })();
+
+APP.verificarEstado.posicion();

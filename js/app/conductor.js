@@ -2,23 +2,26 @@ var APP = APP||{};
 APP.Conductor = (function(){
     "use strict";
 
-    //var $login = $('#login');
-    //var $res = $('#disponibilidad');
-
-    //$('#comprobar').on('click', function(){
-        //var login = $login.val();
-    var getConductor = function(){
+    var getConductor = function(devolverDatos){
         $.ajax({
                 url : 'data/conductor.json',
                 cache : false,
-                success : function(data, textStatus, jqXHR){
-                        console.log(data);
-
-                },
-                error : function(jqXHR, textStatus, errorThrown){//Es conveniente poner una funcion de error siempre.
-                    console.log(errorThrown);
-                }
+                dataType : 'json',
+                success : devolverDatos,
+                error : errorAjax
         });
+    };
+
+    var getDatosConductor = function(data, textStatus, jqXHR){
+        console.log(data);
+        var objeto_json = data;
+        var conductor = objeto_json.conductor;
+        console.log(conductor);
+
+    };
+
+    var errorAjax = function(jqXHR, textStatus, errorThrown){//Es conveniente poner una funcion de error siempre.
+        console.log(errorThrown);
     };
 
     return{
@@ -27,4 +30,7 @@ APP.Conductor = (function(){
 
 })();
 
-APP.Conductor.getConductor();
+APP.Conductor.getConductor(function(data, textStatus, jqXHR){
+    //APP.controller.conductor(data);
+    console.log(data);
+});
