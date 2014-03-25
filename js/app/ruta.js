@@ -1,33 +1,23 @@
 var APP = APP || {};
 
 APP.ruta = (function(){
+    var recorrido =[];
     var getRuta = function(){
     $.ajax({
-      url: '../servidor/compruebaDisponibilidadXML.php',
-      data : { login : $login },
+      url: 'data/recorrido.kml',
       type : 'GET',
       dataType : 'xml',
       success: function(data,textStatus, jqXHR) {
-        var $xml = $(data);
-        if($xml.find('disponible').text()==='no'){
-          if($lista){$lista.remove();}//si ya se ha creado la lista vaciala
-          $lista=$('<ul/>');
-          $xml.find('login').each(function(index,element){
-            var $item=$('<li/>');
-            var texto=($login+$(element).text());
-            $item.append($('<a/>',{
-              html:texto,
-              'class':'alternativa'
-            }));
-            $lista.append($item);
-          });
-          $lista.insertAfter($('#comprobar'));
-        }
+        var $ruta = $(data);
+        recorrido=$ruta.find('coordinates').text();
+        console.log(recorrido);
       }
-    });
-  });
 
-  $(document).on('click','.alternativa',function(e){
-    $('#login').val($(this).text());
-  });
-});
+    });
+  };
+  return {
+      getRuta : getRuta
+    };
+})();
+
+APP.ruta.getRuta();
