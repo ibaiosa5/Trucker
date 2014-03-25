@@ -21,9 +21,6 @@ APP.verificarEstado = (function(){
         navigator.geolocation.getCurrentPosition(success, error, options);
         //guardarPosicion(pos.coords)
     };
-    var leerRuta = function(){
-
-    };
     /*
     var guardarPosicion=function(){
       ruta.push(pos.coords);

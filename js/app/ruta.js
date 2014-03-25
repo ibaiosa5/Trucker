@@ -8,11 +8,12 @@ APP.Ruta = (function(){
 
     //$('#comprobar').on('click', function(){
         //var login = $login.val();
-    /*var getRuta = function(){
+    var getRuta = function(){
         $.ajax({
                 url : 'data/ruta.json',
                 cache : false,
                 success : function(data, textStatus, jqXHR){
+
                         console.log(data);
 
                 },
@@ -20,25 +21,35 @@ APP.Ruta = (function(){
                     console.log(errorThrown);
                 }
         });
-    };*/
-    var getRuta = function(){
+    };
+    var leerRuta = function(kml){
+      var recorrido = [];
     $.ajax({
-      url: 'data/recorrido.kml',
+      url: kml,
       type : 'GET',
       dataType : 'xml',
       success: function(data,textStatus, jqXHR) {
         var $ruta = $(data);
-        recorrido=$ruta.find('coordinates').text();
-        console.log(recorrido);
+        var rutaArray = $ruta.find('coordinates').text().split("\n");
+        $(rutaArray).each(function(index,element){
+          var sepacoma = element.split(",");
+          var coor ={
+            'lat' : sepacoma[0],
+            'lng' : sepacoma[1]
+          };
+          recorrido.push(coor);
+        });
       }
 
     });
+    return recorrido;
   };
 
     return{
-        getRuta : getRuta
+        getRuta : getRuta,
+        leerRuta : leerRuta
     };
 
 })();
 
-APP.Ruta.getRuta();
+APP.Ruta.leerRuta();
