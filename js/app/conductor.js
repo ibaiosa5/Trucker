@@ -1,11 +1,15 @@
 var APP = APP||{};
-APP.Alertas = (function(){
+APP.Conductor = (function(){
     "use strict";
 
-    var getAlertas = function(idConductor){
+    //var $login = $('#login');
+    //var $res = $('#disponibilidad');
+
+    //$('#comprobar').on('click', function(){
+        //var login = $login.val();
+    var getConductor = function(){
         $.ajax({
-                url : 'data/alertas.json',
-                data : { idConductor : idConductor},
+                url : 'data/conductor.json',
                 cache : false,
                 success : function(data, textStatus, jqXHR){
                         console.log(data);
@@ -15,17 +19,12 @@ APP.Alertas = (function(){
                     console.log(errorThrown);
                 }
         });
-
     };
 
     return{
-        getAlertas : getAlertas
+        getConductor : getConductor
     };
 
 })();
 
-APP.Alertas.getAlertas();
-
-
-
-
+APP.Conductor.getConductor();
