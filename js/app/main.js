@@ -6,10 +6,10 @@ APP.Controlador = (function(){
         console.log("Pintar ruta");
     };
     var muestraCamion = function(){
-        console.log("Pintar ruta");
+        console.log("Pintar camion");
     };
     var muestraRemolque = function(){
-        console.log("Pintar ruta");
+        console.log("Pintar remolque");
     };
 
 
