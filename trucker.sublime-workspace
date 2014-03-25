@@ -1,0 +1,546 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"lista",
+				"lista1"
+			],
+			[
+				"text",
+				"textStatus"
+			],
+			[
+				"slide",
+				"slideshow"
+			],
+			[
+				"div",
+				"divMod"
+			],
+			[
+				"new",
+				"newDivMod"
+			],
+			[
+				"validar",
+				"validarFormulario"
+			],
+			[
+				"texta",
+				"textArea"
+			],
+			[
+				"validador",
+				"validadorFormulario"
+			],
+			[
+				"valc",
+				"valCheck"
+			],
+			[
+				"val",
+				"valComment"
+			],
+			[
+				"l",
+				"nth-last-child"
+			],
+			[
+				"enla",
+				"enlaces"
+			],
+			[
+				"enl",
+				"enlaces"
+			],
+			[
+				"que",
+				"querySelectorAll"
+			],
+			[
+				"en",
+				"enlaces"
+			],
+			[
+				"enlace",
+				"enlaces"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"enal",
+				"enlaces"
+			],
+			[
+				"comprob",
+				"comprobarPalindromo"
+			],
+			[
+				"compro",
+				"comprobarPalabra"
+			],
+			[
+				"comp",
+				"comprobarPalabra"
+			],
+			[
+				"com",
+				"comprobarMinuscula"
+			],
+			[
+				"comprobar",
+				"comprobarMayuscula"
+			],
+			[
+				"pa",
+				"palabra"
+			],
+			[
+				"let",
+				"letras"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"p",
+				"push"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"width",
+				"width"
+			],
+			[
+				"widt",
+				"width"
+			],
+			[
+				"tran",
+				"translatey"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"sty",
+				"list-style"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"ca",
+				"class	Attr"
+			],
+			[
+				"al",
+				"alt	Attr"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"op",
+				"option	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 10,
+				"line_ending": "Unix",
+				"name": "index.html"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 54.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 476.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/daw/workspace/DAM2014/AJAX/ej09/js/code.js",
+		"/home/daw/workspace/DAM2014/AJAX/ej07/js/code.js",
+		"/home/daw/workspace/DAM2014/AJAX/ej04/cliente/js/code.js",
+		"/home/daw/workspace/DAM2014/AJAX/ej05/cliente/js/code.js",
+		"/home/daw/workspace/DAM2014/AJAX/ej04/cliente/index.html",
+		"/home/daw/workspace/DAM2014/AJAX/ej09/index.html",
+		"/home/daw/workspace/DAM2014/AJAX/ej04/servidor/compruebaDisponibilidadXML.php",
+		"/home/daw/workspace/DAM2014/AJAX/ej07/servidor/cargaProvinciasJSON.php",
+		"/home/daw/workspace/DAM2014/AJAX/ej07/index.htm",
+		"/home/daw/workspace/DAM2014/AJAX/ej02/cliente/index.html",
+		"/home/daw/workspace/DAM2014/AJAX/ej01/js/code.js",
+		"/home/daw/workspace/DAM2014/AJAX/ej02/cliente/js/code.js",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/js/animaciones.js",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/js/slideshow.js",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/js/sandbox.js",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/js/inputHint.js",
+		"/home/daw/workspace/DAM2014/javaScript/ej06/js/main.js",
+		"/home/daw/workspace/DAM2014/javaScript/ej05/js/main.js",
+		"/home/daw/workspace/DAM2014/javaScript/ej04/js/main.js",
+		"/home/daw/workspace/DAM2014/javaScript/ej03/js/main.js",
+		"/home/daw/workspace/DAM2014/javaScript/ej02/js/main.js",
+		"/home/daw/workspace/DAM2014/javaScript/ej01/js/main.js",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/js/specials.js",
+		"/home/daw/workspace/DAM2014/AJAX/ej01/index.html",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/index.html",
+		"/home/daw/workspace/DAM2014/JQueryValidator/index.html",
+		"/home/daw/workspace/DAM2014/JQueryValidator/js/validador.js",
+		"/home/daw/workspace/DAM2014/javaScript/javascriptFinal/js/validadorFormulario.js",
+		"/home/daw/workspace/DAM2014/javaScript/javascriptFinal/js/main.js",
+		"/home/daw/workspace/DAM2014/javaScript/javascriptFinal/js/validador.js",
+		"/home/daw/workspace/DAM2014/javaScript/javascriptFinal/index.html",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/js/stripe.js",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/slideshow.html",
+		"/home/daw/workspace/DAM2014/JQuery/validadorJQuery/js/validador.js",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/css/style.css",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/sandbox.html",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/libs/bxSlider/jquery.bxslider.css",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/js/tabs.js",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/js/navigation.js",
+		"/home/daw/workspace/DAM2014/JQuery/Ejercicios/animaciones.html",
+		"/home/daw/workspace/DAM2014/JQuery/Efectos/js/animaciones.js",
+		"/home/daw/workspace/DAM2014/JQuery/Efectos/index.html",
+		"/home/daw/workspace/DAM2014/javaScript/ej07/js/main.js",
+		"/home/daw/workspace/DAM2014/javaScript/ej08/js/main.js",
+		"/home/daw/workspace/DAM2014/javaScript/ej07/index.html",
+		"/home/daw/workspace/DAM2014/javaScript/ej08/index.html",
+		"/home/daw/workspace/DAM2014/javaScript/ej06/index.html",
+		"/home/daw/workspace/DAM2014/javaScript/ej03/index.html",
+		"/home/daw/workspace/DAM2014/javaScript/ej05/index.html",
+		"/home/daw/workspace/DAM2014/javaScript/ej05/js/amain.js",
+		"/home/daw/workspace/DAM2014/javaScript/ej04/index.html",
+		"/home/daw/workspace/DAM2014/javaScript/ej02/index.html",
+		"/home/daw/workspace/DAM2014/javaScript/ej01/index.html",
+		"/home/daw/workspace/DAM2014/Fizzbuzz/fizzbuzz.java",
+		"/home/daw/workspace/DAM2014/CSS/ej00/index.html",
+		"/home/daw/workspace/DAM2014/CSS/ej00/css/main.css",
+		"/home/daw/workspace/DAM2014/CSS/ej00/Prueba HTML RWD.png",
+		"/home/daw/workspace/DAM2014/CSS/ej11Animations/css/main.css",
+		"/home/daw/workspace/DAM2014/CSS/ej11Animations/index.html",
+		"/home/daw/workspace/DAM2014/CSS/ej07/css/main.css",
+		"/home/daw/workspace/DAM2014/CSS/ej08/css/main.css",
+		"/home/daw/workspace/DAM2014/CSS/ej09/css/main.css",
+		"/home/daw/workspace/DAM2014/CSS/ej08/index.html",
+		"/home/daw/workspace/DAM2014/CSS/ej10/index.html",
+		"/home/daw/workspace/DAM2014/CSS/ej10/css/ej02.css",
+		"/home/daw/workspace/DAM2014/CSS/ej09/index.html",
+		"/home/daw/workspace/DAM2014/CSS/ej07/index.html",
+		"/home/daw/workspace/DAM2014/CSS/ej06/css/main.css",
+		"/home/daw/workspace/DAM2014/CSS/ej06/index.html",
+		"/home/daw/workspace/DAM2014/CSS/ej05/css/main.css",
+		"/home/daw/workspace/DAM2014/CSS/ej05/index.html",
+		"/home/daw/workspace/DAM2014/CSS/ej04/css/main.css",
+		"/home/daw/workspace/DAM2014/CSS/ej04/index.html",
+		"/home/daw/workspace/DAM2014/CSS/ej03/index.html",
+		"/home/daw/workspace/DAM2014/CSS/ej03/css/main.css",
+		"/home/daw/workspace/DAM2014/CSS/ej02/css/main.css",
+		"/home/daw/workspace/DAM2014/CSS/ej02/index.html",
+		"/home/daw/workspace/DAM2014/Diapos/04 XHTML.pdf",
+		"/home/daw/workspace/DAM2014/CSS/normalize.css",
+		"/home/daw/workspace/DAM2014/CSS/ej01/css/main.css",
+		"/home/daw/workspace/DAM2014/CSS/ej01/index.html",
+		"/home/daw/workspace/DAM2014/XHTML/ej06/index.html",
+		"/home/daw/workspace/DAM2014/XHTML/ej02/index.html",
+		"/home/daw/workspace/DAM2014/XHTML/ej06/Prueba_Web.png",
+		"/home/daw/workspace/DAM2014/XHTML/ej04/index.html",
+		"/home/daw/workspace/DAM2014/XHTML/ej05/index.html",
+		"/home/daw/workspace/DAM2014/XHTML/ej05/post.php",
+		"/home/daw/workspace/DAM2014/XHTML/ej04/main.css",
+		"/home/daw/workspace/DAM2014/XHTML/ej03/index.html",
+		"/home/daw/workspace/DAM2014/XHTML/ej02/portfolio/index.html",
+		"/home/daw/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/daw/workspace/DAM2014/XHTML/ej02/portfolio/proyecto1.html"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"each",
+			"intervalId",
+			"texto",
+			"con",
+			"data",
+			"for",
+			"siblin",
+			"module",
+			"odd",
+			"select",
+			"sele",
+			"odd",
+			"inpu",
+			"mal",
+			"class",
+			"buy",
+			"fright",
+			"buy",
+			".wra",
+			");\n",
+			"paddi",
+			"bre",
+			"a1",
+			"th",
+			"></",
+			"<dt></dt>",
+			"></"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10,
+								10
+							]
+						],
+						"settings":
+						{
+							"auto_name": "index.html",
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "trucker.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 240.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
