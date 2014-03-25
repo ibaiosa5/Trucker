@@ -27,11 +27,6 @@ APP.Controlador = (function(){
 
 
 
-
-    return{
-
-    };
-
-})();
+});
 
 APP.Controlador();
