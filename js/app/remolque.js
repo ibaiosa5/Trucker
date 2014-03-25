@@ -2,11 +2,6 @@ var APP = APP||{};
 APP.Remolque = (function(){
     "use strict";
 
-    //var $login = $('#login');
-    //var $res = $('#disponibilidad');
-
-    //$('#comprobar').on('click', function(){
-        //var login = $login.val();
     var getRemolque = function(){
         $.ajax({
                 url : 'data/remolque.json',

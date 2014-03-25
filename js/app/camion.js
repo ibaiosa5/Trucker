@@ -2,11 +2,6 @@ var APP = APP||{};
 APP.Camion = (function(){
     "use strict";
 
-    //var $login = $('#login');
-    //var $res = $('#disponibilidad');
-
-    //$('#comprobar').on('click', function(){
-        //var login = $login.val();
     var getCamion = function(){
         $.ajax({
                 url : 'data/camion.json',

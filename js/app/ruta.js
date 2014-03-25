@@ -1,3 +1,4 @@
+
 var APP = APP||{};
 APP.Ruta = (function(){
     "use strict";
@@ -7,7 +8,7 @@ APP.Ruta = (function(){
 
     //$('#comprobar').on('click', function(){
         //var login = $login.val();
-    var getRuta = function(){
+    /*var getRuta = function(){
         $.ajax({
                 url : 'data/ruta.json',
                 cache : false,
@@ -19,7 +20,20 @@ APP.Ruta = (function(){
                     console.log(errorThrown);
                 }
         });
-    };
+    };*/
+    var getRuta = function(){
+    $.ajax({
+      url: 'data/recorrido.kml',
+      type : 'GET',
+      dataType : 'xml',
+      success: function(data,textStatus, jqXHR) {
+        var $ruta = $(data);
+        recorrido=$ruta.find('coordinates').text();
+        console.log(recorrido);
+      }
+
+    });
+  };
 
     return{
         getRuta : getRuta
