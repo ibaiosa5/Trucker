@@ -1,6 +1,5 @@
-
 var APP = APP||{};
-APP.Ruta = (function(){
+APP.Remolque = (function(){
     "use strict";
 
     //var $login = $('#login');
@@ -8,9 +7,9 @@ APP.Ruta = (function(){
 
     //$('#comprobar').on('click', function(){
         //var login = $login.val();
-    /*var getRuta = function(){
+    var getRemolque = function(){
         $.ajax({
-                url : 'data/ruta.json',
+                url : 'data/remolque.json',
                 cache : false,
                 success : function(data, textStatus, jqXHR){
                         console.log(data);
@@ -20,25 +19,12 @@ APP.Ruta = (function(){
                     console.log(errorThrown);
                 }
         });
-    };*/
-    var getRuta = function(){
-    $.ajax({
-      url: 'data/recorrido.kml',
-      type : 'GET',
-      dataType : 'xml',
-      success: function(data,textStatus, jqXHR) {
-        var $ruta = $(data);
-        recorrido=$ruta.find('coordinates').text();
-        console.log(recorrido);
-      }
-
-    });
-  };
+    };
 
     return{
-        getRuta : getRuta
+        getRemolque : getRemolque
     };
 
 })();
 
-APP.Ruta.getRuta();
+APP.Remolque.getRemolque();
