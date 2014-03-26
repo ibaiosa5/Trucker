@@ -3,6 +3,7 @@ APP.Controlador = (function(){
     "use strict";
 
 
+
         var laRuta  = $(document).on('click', '#ruta', function(e){
             console.log("han hecho click en Ruta");
         var ruta = APP.Ruta.getRuta();
@@ -44,6 +45,7 @@ APP.Controlador = (function(){
           var elRemolque = document.getElementById("remolque");
         elRemolque.addEventListener("click", APP.remolque.mostrarRemolque, false);
 */
+
 
 
 
