@@ -15,6 +15,7 @@ $(function(){
     });
 
 
+
         $(document).on('click', '#ruta', function(e){
             console.log("han hecho click en Ruta");
         var ruta = APP.Ruta.getRuta();
@@ -24,7 +25,7 @@ $(function(){
 
         });
 
-        $(document).on('click', '#camion', function(e){
+        v$(document).on('click', '#camion', function(e){
             console.log("han hecho click en Camion");
         var camion = APP.Camion.getCamion();
 

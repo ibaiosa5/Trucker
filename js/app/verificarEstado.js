@@ -1,5 +1,6 @@
 var APP = APP || {};
 
+
 APP.verificarEstado = (function(){
   var RANGO =100;
   var RMUNDO =6371000;
