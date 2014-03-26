@@ -42,18 +42,6 @@ $(function(){
             });
         });
 
-
-
-        $(document).on('click', '#ruta', function(e){
-
-        var ruta = APP.Ruta.getRuta(function(ruta, textStatus, jqXHR){
-            console.log(ruta);
-
-                APP.UI.mostrarRuta(ruta);
-
-});
-});
-
     $(document).on('click', '#conductor', function(e){
         APP.Conductor.getConductor(function(conductor, textStatus, jqXHR){
             APP.UI.mostrarConductor(conductor);
