@@ -16,8 +16,20 @@ $(function(){
                 APP.UI.avisoAlertas(alertas.alertas);
 
             }
-        }, 15000000);
-    });*/
+
+        }, 150000);
+    });
+*/
+
+
+
+
+    $("#map").googleMap({
+      zoom: 10, // Initial zoom level (optional)
+      coords: [48.895651, 2.290569], // Map center (optional)
+      type: "ROADMAP" // Map type (optional)
+    });
+
 
         $(document).on('click', '#alertas', function(e){
             APP.Alertas.getAlertas(function(alertas, textStatus, jqXHR){
@@ -27,9 +39,22 @@ $(function(){
             });
         });
 
+
+
+        $(document).on('click', '#ruta', function(e){
+
+        var ruta = APP.Ruta.getRuta(function(ruta, textStatus, jqXHR){
+            console.log(ruta);
+
+                APP.UI.mostrarRuta(ruta);
+
+});
+});
+
     $(document).on('click', '#conductor', function(e){
         APP.Conductor.getConductor(function(conductor, textStatus, jqXHR){
             APP.UI.mostrarConductor(conductor);
+
         });
     });
 
