@@ -18,7 +18,3 @@ APP.Remolque = (function(){
     };
 
 })();
-
-APP.Remolque.getRemolque(function(data, textStatus, jqXHR){
-    console.log(data);
-});
