@@ -11,27 +11,46 @@ APP.UI = (function(lng, undefined) {
 
     };
 
-       var mostrarRuta = function(){
+    var mostrarRuta = function(){
         console.log("Pintar ruta");
     };
-    var mostrarCamion = function(){
+    var mostrarCamion = function(camion){
         console.log("Pintar camion");
-    };
-    var mostrarRemolque = function(){
-        console.log("Pintar remolque");
+        var $ul = $('#listaDatos');
+        $ul.empty();
+        $ul.append('<li>Identificador: ' + camion.idCamion + '</li>');
+        $ul.append('<li>Matricula: ' + camion.matricula + '</li>');
     };
 
+    var mostrarRemolque = function(remolque){
+        console.log("Pintar remolque");
+        var $ul = $('#listaDatos');
+        $ul.empty();
+        $ul.append('<li>Identificador: ' + remolque.idRemolque + '</li>');
+        $ul.append('<li>Matricula: ' + remolque.matricula + '</li>');
+    };
 
     var mostrarAlertas = function(alertas) {
-        var $ul = $('#listaAlertas');
+        var $ul = $('#listaDatos');
         $ul.empty();
+        var lis = [];
         for (var i = 0; i < alertas.length; i++) {
             var $li = createElement(alertas[i].descripcion);
-            $ul.append($li); ///Cambiar para hacer el append fuera
+            lis.push($li);
         }
+        $ul.append(lis);
     };
+
+    var mostrarConductor = function(conductor){
+        var $ul = $('#listaDatos');
+        $ul.empty();
+        $ul.append('<li>Identificador: ' + conductor.idConductor + '</li>');
+        $ul.append('<li>Nombre: ' + conductor.nombre + '</li>');
+        $ul.append('<li>Apellido: ' + conductor.apellido + '</li>');
+    };
+
     var esconderAlertas = function(alertas) {
-        var $ul = $('#listaAlertas');
+        var $ul = $('#listaDatos');
         $ul.empty();
     };
 
@@ -45,6 +64,7 @@ APP.UI = (function(lng, undefined) {
     return {
         mostrarAlertas : mostrarAlertas,
         esconderAlertas : esconderAlertas,
+        mostrarConductor : mostrarConductor,
         mostrarRuta : mostrarRuta,
         mostrarCamion : mostrarCamion,
         mostrarRemolque : mostrarRemolque,

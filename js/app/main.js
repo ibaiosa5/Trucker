@@ -1,55 +1,69 @@
-var APP = APP||{};
-APP.Controlador = (function(){
+$(function(){
     "use strict";
 
 
 
-        var laRuta  = $(document).on('click', '#ruta', function(e){
+    var mostrarAlertas = setInterval( function(e){
+
+        APP.Alertas.hayAlertas(function(alertas, textStatus, jqXHR){
+
+            if (alertas.alertas.length>0){
+
+                APP.UI.avisoAlertas(alertas.alertas);
+
+            }
+        }, 15000000);
+    });
+
+    $(document).on('click', '#alertas', function(e){
+        APP.Alertas.getAlertas(function(alertas, textStatus, jqXHR){
+            if (alertas.alertas.length>0){
+                APP.UI.mostrarAlertas(alertas.alertas);
+            } else APP.UI.esconderAlertas(alertas);
+        });
+    });
+
+        $(document).on('click', '#conductor', function(e){
+            APP.Conductor.getConductor(function(conductor, textStatus, jqXHR){
+                console.log(conductor);
+                APP.UI.mostrarConductor(conductor);
+                console.log(conductor);
+            });
+        });
+
+        $(document).on('click', '#ruta', function(e){
             console.log("han hecho click en Ruta");
         var ruta = APP.Ruta.getRuta();
-        //if (alertas.length){
             console.log("hay ruta");
             APP.UI.mostrarRuta();
             console.log(ruta);
-        //} else APP.UI.esconderAlertas(alertas);
+
         });
 
-        var elCamion  = $(document).on('click', '#camion', function(e){
+        $(document).on('click', '#camion', function(e){
             console.log("han hecho click en Camion");
-        var camion = APP.Camion.getCamion();
-        //if (alertas.length){
-            console.log("hay camion");
-            APP.UI.mostrarCamion();
+        var camion = APP.Camion.getCamion(function(camion, textStatus, jqXHR){
             console.log(camion);
-        //} else APP.UI.esconderAlertas(alertas);
+
+                APP.UI.mostrarCamion(camion);
+
         });
 
-        var $remolque = $('#remolque');
-        var elRemolque  = $(document).on('click', $remolque, function(e){
+
+        });
+
+        $(document).on('click', '#remolque', function(e){
             console.log("han hecho click en Remolque");
-        var remolque = APP.Remolque.getRemolque();
-        //if (alertas.length){
-            console.log("hay remolque");
-            APP.UI.mostrarRemolque();
-            console.log($remolque);
-        //} else APP.UI.esconderAlertas(alertas);
+
+            var remolque = APP.Remolque.getRemolque(function(remolque, textStatus, jqXHR){
+            console.log(remolque);
+
+                APP.UI.mostrarRemolque(remolque);
+
+
+
         });
-
-
-        //var laRuta = document.getElementById("ruta");
-        //laRuta.addEventListener("click", APP.Ui.muestraRuta(), false);
-        //console.log(laRuta);
-
-        /*  var elCamion = document.getElementById("camion");
-        elCamion.addEventListener("click", APP.Camion.mostrarCamion, false);
-          var elRemolque = document.getElementById("remolque");
-        elRemolque.addEventListener("click", APP.remolque.mostrarRemolque, false);
-*/
-
-
-
-
 
 });
 
-APP.Controlador();
+});
