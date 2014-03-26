@@ -10,7 +10,13 @@ $(function(){
         });
     });
 
-
+        $(document).on('click', '#conductor', function(e){
+            APP.Conductor.getConductor(function(conductor, textStatus, jqXHR){
+                console.log(conductor);
+                APP.UI.mostrarConductor(conductor);
+                console.log(conductor);
+            });
+        });
 
         $(document).on('click', '#ruta', function(e){
             console.log("han hecho click en Ruta");

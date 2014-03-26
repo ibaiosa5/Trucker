@@ -57,6 +57,7 @@ APP.UI = (function(lng, undefined) {
     return {
         mostrarAlertas : mostrarAlertas,
         esconderAlertas : esconderAlertas,
+        mostrarConductor : mostrarConductor,
         mostrarRuta : mostrarRuta,
         mostrarCamion : mostrarCamion,
         mostrarRemolque : mostrarRemolque
