@@ -11,12 +11,7 @@ APP.verificarEstado = (function(){
   //Tiempo
   var estadoMarchaParado = "parado";
 
-
-
-
-
     var posicion = function(callback){
-
         var options = {
           enableHighAccuracy: true,
           timeout: 5000,
@@ -67,6 +62,8 @@ APP.verificarEstado = (function(){
 
     };
 
+
+
     var verificador = function(recorrido){
       posicion(function(pos){
                   guardarPosicion(pos);
@@ -74,12 +71,7 @@ APP.verificarEstado = (function(){
               });
     };
     return {
-
-      calcularDistancia : calcularDistancia,
-      posicion : posicion,
-
       verificador:verificador
-
     };
 
 })();
