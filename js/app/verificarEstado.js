@@ -1,11 +1,15 @@
 var APP = APP || {};
 
+
 APP.verificarEstado = (function(){
   var RANGO =100;
   var RMUNDO =6371000;
   var posicionActual;
   var ultimaPosicion = 0;
   var ruta =[];
+
+  //Tiempo
+  var estadoMarchaParado = "parado";
 
     var posicion = function(callback){
         var options = {
