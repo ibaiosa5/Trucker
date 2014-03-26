@@ -1,5 +1,5 @@
-var App = App||{};
-App.UI = (function(lng, undefined) {
+var APP = APP||{};
+APP.UI = (function(lng, undefined) {
     "use strict";
 
     var createElement = function(descripcion){
@@ -14,17 +14,22 @@ App.UI = (function(lng, undefined) {
     };
 
     var mostrarAlertas = function(alertas) {
-        var listaAlertas = $('#listaAlertas');
+        var ul = $('#listaAlertas');
         $ul.empty();
         for (var i = 0; i < alertas.length; i++) {
             var $li = createElement(alertas[i].descripcion);
             $ul.append($li); ///Cambiar para hacer el append fuera
         }
+        console.log($ul);
+    };
+    var esconderAlertas = function(alertas) {
+        var ul = $('#listaAlertas');
+        $ul.empty();
     };
 
-
     return {
-        mostrarAlertas : mostrarAlertas
+        mostrarAlertas : mostrarAlertas,
+        esconderAlertas : esconderAlertas
     };
 
 })();
