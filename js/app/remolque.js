@@ -2,14 +2,11 @@ var APP = APP||{};
 APP.Remolque = (function(){
     "use strict";
 
-    var getRemolque = function(){
+    var getRemolque = function(devolverRemolque){
         $.ajax({
                 url : 'data/remolque.json',
                 cache : false,
-                success : function(data, textStatus, jqXHR){
-                        console.log(data);
-
-                },
+                success : devolverRemolque,
                 error : function(jqXHR, textStatus, errorThrown){//Es conveniente poner una funcion de error siempre.
                     console.log(errorThrown);
                 }
@@ -22,4 +19,6 @@ APP.Remolque = (function(){
 
 })();
 
-APP.Remolque.getRemolque();
+APP.Remolque.getRemolque(function(data, textStatus, jqXHR){
+    console.log(data);
+});
