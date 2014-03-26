@@ -20,10 +20,13 @@ $(function(){
 
         $(document).on('click', '#ruta', function(e){
             console.log("han hecho click en Ruta");
-        var ruta = APP.Ruta.getRuta();
-            console.log("hay ruta");
-            APP.UI.mostrarRuta();
+        var ruta = APP.Ruta.getRuta(function(camion, textStatus, jqXHR){
             console.log(ruta);
+
+                APP.UI.mostrarRuta(ruta);
+
+        });
+
 
         });
 

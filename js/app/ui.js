@@ -11,8 +11,12 @@ APP.UI = (function(lng, undefined) {
 
     };
 
-    var mostrarRuta = function(){
+    var mostrarRuta = function(ruta){
         console.log("Pintar ruta");
+        var $ul = $('#listaDatos');
+        $ul.empty();
+        $ul.append('<li>Ruta: ' + ruta.idRuta + '</li>');
+        $ul.append('<li>KML: ' + ruta.kml + '</li>');
     };
     var mostrarCamion = function(camion){
         console.log("Pintar camion");
