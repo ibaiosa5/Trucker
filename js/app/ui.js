@@ -9,9 +9,18 @@ App.UI = (function(lng, undefined) {
 
             return $li;
 
-
-
     };
+
+       var muestraRuta = function(){
+        console.log("Pintar ruta");
+    };
+    var muestraCamion = function(){
+        console.log("Pintar camion");
+    };
+    var muestraRemolque = function(){
+        console.log("Pintar remolque");
+    };
+
 
     var mostrarAlertas = function(alertas) {
         var listaAlertas = $('#listaAlertas');
@@ -24,7 +33,8 @@ App.UI = (function(lng, undefined) {
 
 
     return {
-        mostrarAlertas : mostrarAlertas
+        mostrarAlertas : mostrarAlertas,
+        muestraRuta : muestraRuta
     };
 
 })();

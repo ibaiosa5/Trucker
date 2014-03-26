@@ -231,15 +231,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 10,
-				"line_ending": "Unix",
-				"name": "index.html"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -277,6 +268,21 @@
 	},
 	"file_history":
 	[
+		"/home/daw/workspace/Trucker/js/app/main.js",
+		"/home/daw/workspace/Trucker/js/verificarEstado.js",
+		"/home/daw/workspace/Trucker/README.md",
+		"/home/daw/workspace/Trucker/index.html",
+		"/home/daw/workspace/Trucker/js/app/verificarEstado.js",
+		"/home/daw/workspace/Trucker/js/main.js",
+		"/home/daw/workspace/Trucker/data/conductor.json",
+		"/home/daw/workspace/Trucker/js/app/camion.js",
+		"/home/daw/workspace/Trucker/data/ruta.json",
+		"/home/daw/workspace/Trucker/data/camion.json",
+		"/home/daw/workspace/Trucker/js/app/ruta.js",
+		"/home/daw/workspace/Trucker/js/app/conductor.js",
+		"/home/daw/workspace/Trucker/js/app/remolque.js",
+		"/home/daw/workspace/Trucker/data/remolque.json",
+		"/home/daw/Descargas/GR_180_Etapa_1-_Madrigal_de_la.kml",
 		"/home/daw/workspace/DAM2014/AJAX/ej09/js/code.js",
 		"/home/daw/workspace/DAM2014/AJAX/ej07/js/code.js",
 		"/home/daw/workspace/DAM2014/AJAX/ej04/cliente/js/code.js",
@@ -430,39 +436,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10,
-								10
-							]
-						],
-						"settings":
-						{
-							"auto_name": "index.html",
-							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

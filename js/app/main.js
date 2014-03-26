@@ -2,20 +2,21 @@ var APP = APP||{};
 APP.Controlador = (function(){
     "use strict";
 
-    var muestraRuta = function(){
-        console.log("Pintar ruta");
-    };
-    var muestraCamion = function(){
-        console.log("Pintar camion");
-    };
-    var muestraRemolque = function(){
-        console.log("Pintar remolque");
-    };
 
+$(document).on('click', $ruta, function(e){
+            console.log("han hecho click en alertas");
+
+        var alertas = APP.Alertas.getAlertas("00001");
+        if (alertas.length){
+            console.log("hay alertas");
+            APP.UI.mostrarAlertas(alertas);
+            console.log(alertas);
+        } else APP.UI.esconderAlertas(alertas);
+    });
 
 
         var laRuta = document.getElementById("ruta");
-        laRuta.addEventListener("click", muestraRuta, false);
+        laRuta.addEventListener("click", APP.Ui.muestraRuta(), false);
         console.log(laRuta);
 
           var elCamion = document.getElementById("camion");
