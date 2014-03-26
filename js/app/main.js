@@ -2,11 +2,15 @@ var APP = APP||{};
 APP.Controlador = (function(){
     "use strict";
 
+    APP.Ruta.getRuta(function(ruta){
+                        APP.verificarEstado.verificador(ruta);
+                    });
+
 
 
         var laRuta  = $(document).on('click', '#ruta', function(e){
             console.log("han hecho click en Ruta");
-        var ruta = APP.Ruta.getRuta();
+            APP.Ruta.getRuta(function(ruta){recorrido=ruta;});
         //if (alertas.length){
             console.log("hay ruta");
             APP.UI.mostrarRuta();
