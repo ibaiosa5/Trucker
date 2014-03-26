@@ -1,10 +1,13 @@
 $(function(){
     "use strict";
     var recorrido;
+    var idPosicionInterval;
 
     APP.Ruta.getRuta(function(ruta){
         recorrido = ruta;
-        setInterval(APP.verificarEstado.verificador(recorrido),5000);
+        idPosicionInterval = setInterval(function(){
+            APP.verificarEstado.verificador(recorrido);
+        },5000);
     });
 
     /*var mostrarAlertas = setInterval( function(e){
