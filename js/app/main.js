@@ -4,10 +4,8 @@ $(function(){
 
     APP.Ruta.getRuta(function(ruta){
         recorrido = ruta;
-        APP.verificarEstado.verificador(ruta);
+        setInterval(APP.verificarEstado.verificador(recorrido),5000);
     });
-
-
 
     /*var mostrarAlertas = setInterval( function(e){
 
@@ -33,13 +31,13 @@ $(function(){
     });
 
 
-    $(document).on('click', '#alertas', function(e){
-        APP.Alertas.getAlertas(function(alertas, textStatus, jqXHR){
-            if (alertas.alertas.length > 0){
-                APP.UI.mostrarAlertas(alertas.alertas);
-            } else APP.UI.esconderAlertas(alertas);
+        $(document).on('click', '#alertas', function(e){
+            APP.Alertas.getAlertas(function(alertas, textStatus, jqXHR){
+                if (alertas.alertas.length > 0){
+                    APP.UI.mostrarAlertas(alertas.alertas);
+                } else APP.UI.esconderAlertas(alertas);
+            });
         });
-    });
 
     $(document).on('click', '#conductor', function(e){
         APP.Conductor.getConductor(function(conductor, textStatus, jqXHR){
