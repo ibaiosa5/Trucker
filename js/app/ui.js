@@ -11,16 +11,15 @@ APP.UI = (function(lng, undefined) {
 
     };
 
-       var mostrarRuta = function(){
+    var mostrarRuta = function(){
         console.log("Pintar ruta");
     };
     var mostrarCamion = function(){
         console.log("Pintar camion");
     };
-    var mostrarRemolque = function(){
+    var mostrarRemolque = function(remolque){
         console.log("Pintar remolque");
     };
-
 
     var mostrarAlertas = function(alertas) {
         var $ul = $('#listaAlertas');

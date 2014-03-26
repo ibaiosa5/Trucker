@@ -1,55 +1,52 @@
-var APP = APP||{};
-APP.Controlador = (function(){
+$(function(){
     "use strict";
 
 
+    $(document).on('click', '#alertas', function(e){
 
-        var laRuta  = $(document).on('click', '#ruta', function(e){
+        APP.Alertas.getAlertas(function(alertas, textStatus, jqXHR){
+
+            if (alertas.alertas.length>0){
+
+                APP.UI.mostrarAlertas(alertas.alertas);
+
+            } else APP.UI.esconderAlertas(alertas);
+        });
+    });
+
+
+        $(document).on('click', '#ruta', function(e){
             console.log("han hecho click en Ruta");
         var ruta = APP.Ruta.getRuta();
-        //if (alertas.length){
             console.log("hay ruta");
             APP.UI.mostrarRuta();
             console.log(ruta);
-        //} else APP.UI.esconderAlertas(alertas);
+
         });
 
-        var elCamion  = $(document).on('click', '#camion', function(e){
+        $(document).on('click', '#camion', function(e){
             console.log("han hecho click en Camion");
         var camion = APP.Camion.getCamion();
-        //if (alertas.length){
+
             console.log("hay camion");
             APP.UI.mostrarCamion();
             console.log(camion);
-        //} else APP.UI.esconderAlertas(alertas);
+
         });
 
-        var $remolque = $('#remolque');
-        var elRemolque  = $(document).on('click', $remolque, function(e){
+        $(document).on('click', '#remolque', function(e){
             console.log("han hecho click en Remolque");
-        var remolque = APP.Remolque.getRemolque();
-        //if (alertas.length){
-            console.log("hay remolque");
-            APP.UI.mostrarRemolque();
-            console.log($remolque);
-        //} else APP.UI.esconderAlertas(alertas);
+
+
+               APP.Remolque.getRemolque(function(remolque, textStatus, jqXHR){
+
+            if (remolque.length>0){
+
+                APP.UI.mostrarRemolque(remolque);
+
+            }
         });
-
-
-        //var laRuta = document.getElementById("ruta");
-        //laRuta.addEventListener("click", APP.Ui.muestraRuta(), false);
-        //console.log(laRuta);
-
-        /*  var elCamion = document.getElementById("camion");
-        elCamion.addEventListener("click", APP.Camion.mostrarCamion, false);
-          var elRemolque = document.getElementById("remolque");
-        elRemolque.addEventListener("click", APP.remolque.mostrarRemolque, false);
-*/
-
-
-
-
 
 });
 
-APP.Controlador();
+});
