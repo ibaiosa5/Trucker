@@ -8,6 +8,9 @@ APP.verificarEstado = (function(){
   var ultimaPosicion = 0;
   var ruta =[];
 
+  //Tiempo
+  var estadoMarchaParado = "parado";
+
     var posicion = function(){
         var options = {
           enableHighAccuracy: true,
