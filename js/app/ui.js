@@ -54,12 +54,12 @@ APP.UI = (function(lng, undefined) {
         $ul.empty();
     };
 
-    var avisoAlertas = function(alertas) {
+    /*var avisoAlertas = function(alertas) {
         for (var i = 0; i < alertas.length; i++) {
             console.log(alertas[i].descripcion);
             //alert(alertas[i].descripcion);
         }
-    };
+    };*/
 
     return {
         mostrarAlertas : mostrarAlertas,
@@ -68,7 +68,7 @@ APP.UI = (function(lng, undefined) {
         mostrarRuta : mostrarRuta,
         mostrarCamion : mostrarCamion,
         mostrarRemolque : mostrarRemolque,
-        avisoAlertas : avisoAlertas
+        //avisoAlertas : avisoAlertas
     };
 
 })();
