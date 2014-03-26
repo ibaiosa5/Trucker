@@ -2,7 +2,7 @@ $(function(){
     "use strict";
 
 
-
+/*
     var mostrarAlertas = setInterval( function(e){
 
         APP.Alertas.hayAlertas(function(alertas, textStatus, jqXHR){
@@ -12,7 +12,27 @@ $(function(){
                 APP.UI.avisoAlertas(alertas.alertas);
 
             }
-        }, 15000000);
+        }, 150000);
+    });
+
+
+    var tiempoMarcha = setInterval( function(e){
+
+        APP.verificarEstado.verificarTiempo(function(tiempo, textStatus, jqXHR){
+
+            console.log("paso");
+
+                APP.UI.avisoTiempo(tiempo);
+
+
+        }, 15000);
+    });
+*/
+
+    $("#map").googleMap({
+      zoom: 10, // Initial zoom level (optional)
+      coords: [48.895651, 2.290569], // Map center (optional)
+      type: "ROADMAP" // Map type (optional)
     });
 
     $(document).on('click', '#alertas', function(e){
@@ -33,7 +53,8 @@ $(function(){
 
         $(document).on('click', '#ruta', function(e){
             console.log("han hecho click en Ruta");
-        var ruta = APP.Ruta.getRuta(function(camion, textStatus, jqXHR){
+            APP.UI.mostrarRuta(ruta);
+        var ruta = APP.Ruta.getRuta(function(ruta, textStatus, jqXHR){
             console.log(ruta);
 
                 APP.UI.mostrarRuta(ruta);

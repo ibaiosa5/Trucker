@@ -11,6 +11,10 @@ APP.verificarEstado = (function(){
   //Tiempo
   var estadoMarchaParado = "parado";
 
+  var verificarTiempo = function(){
+    return "OK";
+  };
+
     var posicion = function(){
         var options = {
           enableHighAccuracy: true,
@@ -73,7 +77,8 @@ APP.verificarEstado = (function(){
     };
     return {
       calcularDistancia : calcularDistancia,
-      posicion : posicion
+      posicion : posicion,
+      verificarTiempo : verificarTiempo
     };
 
 })();
