@@ -6,7 +6,6 @@ APP.Alertas = (function(){
 
         $.ajax({
                 url : 'data/alertas.json',
-                //data : { idConductor : idConductor},
                 cache : false,
                 dataType : 'json',
                 success : devolverDatos,
@@ -14,11 +13,25 @@ APP.Alertas = (function(){
         });
 
     };
+
+    var hayAlertas = function(devolverDatos){
+
+        $.ajax({
+                url : 'data/avisoAlertas.json',
+                cache : false,
+                dataType : 'json',
+                success : devolverDatos,
+                error : errorAjax
+        });
+
+    };
+
     var errorAjax = function(jqXHR, textStatus, errorThrown){//Es conveniente poner una funcion de error siempre.
         console.log(errorThrown);
     };
     return{
-        getAlertas : getAlertas
+        getAlertas : getAlertas,
+        hayAlertas : hayAlertas
     };
 
 })();
