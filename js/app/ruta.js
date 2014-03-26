@@ -52,4 +52,4 @@ APP.Ruta = (function(){
 
 })();
 
-APP.Ruta.leerRuta();
+
