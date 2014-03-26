@@ -14,11 +14,20 @@ APP.UI = (function(lng, undefined) {
     var mostrarRuta = function(){
         console.log("Pintar ruta");
     };
-    var mostrarCamion = function(){
+    var mostrarCamion = function(camion){
         console.log("Pintar camion");
+        var $ul = $('#listaDatos');
+        $ul.empty();
+        $ul.append('<li>Identificador: ' + camion.idCamion + '</li>');
+        $ul.append('<li>Matricula: ' + camion.matricula + '</li>');
     };
+
     var mostrarRemolque = function(remolque){
         console.log("Pintar remolque");
+        var $ul = $('#listaDatos');
+        $ul.empty();
+        $ul.append('<li>Identificador: ' + remolque.idRemolque + '</li>');
+        $ul.append('<li>Matricula: ' + remolque.matricula + '</li>');
     };
 
     var mostrarAlertas = function(alertas) {

@@ -19,7 +19,3 @@ APP.Camion = (function(){
     };
 
 })();
-
-APP.Camion.getCamion(function(data, textStatus, jqXHR){
-    console.log(data);
-});
