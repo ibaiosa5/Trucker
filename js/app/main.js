@@ -2,11 +2,8 @@ $(function(){
     "use strict";
 
     APP.Ruta.getRuta(function(ruta){
-                        APP.verificarEstado.verificador(ruta);
+                        setInterval(APP.verificarEstado.verificador(ruta),5000);
                     });
-
-
-
     /*var mostrarAlertas = setInterval( function(e){
 
         APP.Alertas.hayAlertas(function(alertas, textStatus, jqXHR){
@@ -19,13 +16,13 @@ $(function(){
         }, 15000000);
     });*/
 
-    $(document).on('click', '#alertas', function(e){
-        APP.Alertas.getAlertas(function(alertas, textStatus, jqXHR){
-            if (alertas.alertas.length > 0){
-                APP.UI.mostrarAlertas(alertas.alertas);
-            } else APP.UI.esconderAlertas(alertas);
+        $(document).on('click', '#alertas', function(e){
+            APP.Alertas.getAlertas(function(alertas, textStatus, jqXHR){
+                if (alertas.alertas.length > 0){
+                    APP.UI.mostrarAlertas(alertas.alertas);
+                } else APP.UI.esconderAlertas(alertas);
+            });
         });
-    });
 
         $(document).on('click', '#conductor', function(e){
             APP.Conductor.getConductor(function(conductor, textStatus, jqXHR){

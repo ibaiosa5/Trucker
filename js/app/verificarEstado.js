@@ -63,6 +63,7 @@ APP.verificarEstado = (function(){
     };
 
     var verificador = function(recorrido){
+      console.log("aaas");
       posicion(function(pos){
                   guardarPosicion(pos);
                   verificarPosicion(pos,ultimaPosicion,recorrido);
