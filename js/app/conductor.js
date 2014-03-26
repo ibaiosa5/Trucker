@@ -2,12 +2,12 @@ var APP = APP||{};
 APP.Conductor = (function(){
     "use strict";
 
-    var getConductor = function(devolverDatos){
+    var getConductor = function(devolverConductor){
         $.ajax({
                 url : 'data/conductor.json',
                 cache : false,
                 dataType : 'json',
-                success : devolverDatos,
+                success : devolverConductor,
                 error : errorAjax
         });
     };

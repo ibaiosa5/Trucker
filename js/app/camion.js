@@ -2,14 +2,12 @@ var APP = APP||{};
 APP.Camion = (function(){
     "use strict";
 
-    var getCamion = function(){
+    var getCamion = function(devolverCamion){
         $.ajax({
                 url : 'data/camion.json',
                 cache : false,
-                success : function(data, textStatus, jqXHR){
-                        console.log(data);
-
-                },
+                dataType : 'json',
+                success : devolverCamion,
                 error : function(jqXHR, textStatus, errorThrown){//Es conveniente poner una funcion de error siempre.
                     console.log(errorThrown);
                 }
@@ -22,4 +20,6 @@ APP.Camion = (function(){
 
 })();
 
-APP.Camion.getCamion();
+APP.Camion.getCamion(function(data, textStatus, jqXHR){
+    console.log(data);
+});
