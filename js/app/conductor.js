@@ -12,13 +12,13 @@ APP.Conductor = (function(){
         });
     };
 
-    var getDatosConductor = function(data, textStatus, jqXHR){
+    /*var getDatosConductor = function(data, textStatus, jqXHR){
         console.log(data);
         var objeto_json = data;
         var conductor = objeto_json.conductor;
         console.log(conductor);
 
-    };
+    };*/
 
     var errorAjax = function(jqXHR, textStatus, errorThrown){//Es conveniente poner una funcion de error siempre.
         console.log(errorThrown);
@@ -29,8 +29,3 @@ APP.Conductor = (function(){
     };
 
 })();
-
-APP.Conductor.getConductor(function(data, textStatus, jqXHR){
-    //APP.controller.conductor(data);
-    console.log(data);
-});
