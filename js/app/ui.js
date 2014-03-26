@@ -26,8 +26,11 @@ APP.UI = (function(lng, undefined) {
         ]
     });
         $ul.empty();
-        $ul.append('<li>Ruta: ' + ruta.idRuta + '</li>');
-        $ul.append('<li>KML: ' + ruta.kml + '</li>');
+        var lis = [];
+        for (var i = 0; i < ruta.length-1; i++) {
+            lis.push('<li>Lat: ' + ruta[i].lat + ', Lng: ' + ruta[i].lng + '</li>');
+        }
+        $ul.append(lis);
     };
     var mostrarCamion = function(camion){
         console.log("Pintar camion");
@@ -69,12 +72,12 @@ APP.UI = (function(lng, undefined) {
         $ul.empty();
     };
 
-    var avisoAlertas = function(alertas) {
+    /*var avisoAlertas = function(alertas) {
         for (var i = 0; i < alertas.length; i++) {
             //console.log(alertas[i].descripcion);
             //alert(alertas[i].descripcion);
         }
-    };
+    };*/
 
         var avisoTiempo = function(tiempo) {
 
@@ -89,7 +92,7 @@ APP.UI = (function(lng, undefined) {
         mostrarRuta : mostrarRuta,
         mostrarCamion : mostrarCamion,
         mostrarRemolque : mostrarRemolque,
-        avisoAlertas : avisoAlertas
+        //avisoAlertas : avisoAlertas
     };
 
 })();
