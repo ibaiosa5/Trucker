@@ -16,11 +16,9 @@ $(function(){
 
         $(document).on('click', '#conductor', function(e){
             APP.Conductor.getConductor(function(conductor, textStatus, jqXHR){
-                if(conductor.length > 0){
-                    APP.UI.mostrarConcuctor(conductor);
-                }
-                else
-                    console.log(conductor);
+                console.log(conductor);
+                APP.UI.mostrarConductor(conductor);
+                console.log(conductor);
             });
         });
 
@@ -33,7 +31,7 @@ $(function(){
 
         });
 
-        v$(document).on('click', '#camion', function(e){
+        $(document).on('click', '#camion', function(e){
             console.log("han hecho click en Camion");
         var camion = APP.Camion.getCamion();
 
