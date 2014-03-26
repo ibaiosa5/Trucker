@@ -11,13 +11,13 @@ APP.UI = (function(lng, undefined) {
 
     };
 
-       var muestraRuta = function(){
+       var mostrarRuta = function(){
         console.log("Pintar ruta");
     };
-    var muestraCamion = function(){
+    var mostrarCamion = function(){
         console.log("Pintar camion");
     };
-    var muestraRemolque = function(){
+    var mostrarRemolque = function(){
         console.log("Pintar remolque");
     };
 
@@ -49,7 +49,9 @@ APP.UI = (function(lng, undefined) {
     return {
         mostrarAlertas : mostrarAlertas,
         esconderAlertas : esconderAlertas,
-        muestraRuta : muestraRuta
+        mostrarRuta : mostrarRuta,
+        mostrarCamion : mostrarCamion,
+        mostrarRemolque : mostrarRemolque
     };
 
 })();
