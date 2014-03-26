@@ -15,8 +15,11 @@ APP.UI = (function(lng, undefined) {
         console.log("Pintar ruta");
         var $ul = $('#listaDatos');
         $ul.empty();
-        $ul.append('<li>Ruta: ' + ruta.idRuta + '</li>');
-        $ul.append('<li>KML: ' + ruta.kml + '</li>');
+        var lis = [];
+        for (var i = 0; i < ruta.length-1; i++) {
+            lis.push('<li>Lat: ' + ruta[i].lat + ', Lng: ' + ruta[i].lng + '</li>');
+        }
+        $ul.append(lis);
     };
     var mostrarCamion = function(camion){
         console.log("Pintar camion");

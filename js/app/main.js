@@ -1,9 +1,12 @@
 $(function(){
     "use strict";
+    var recorrido;
 
     APP.Ruta.getRuta(function(ruta){
-                        setInterval(APP.verificarEstado.verificador(ruta),5000);
-                    });
+        recorrido = ruta;
+        setInterval(APP.verificarEstado.verificador(recorrido),5000);
+    });
+
     /*var mostrarAlertas = setInterval( function(e){
 
         APP.Alertas.hayAlertas(function(alertas, textStatus, jqXHR){
@@ -24,49 +27,29 @@ $(function(){
             });
         });
 
-        $(document).on('click', '#conductor', function(e){
-            APP.Conductor.getConductor(function(conductor, textStatus, jqXHR){
-                APP.UI.mostrarConductor(conductor);
-            });
+    $(document).on('click', '#conductor', function(e){
+        APP.Conductor.getConductor(function(conductor, textStatus, jqXHR){
+            APP.UI.mostrarConductor(conductor);
         });
+    });
 
-        $(document).on('click', '#ruta', function(e){
-            console.log("han hecho click en Ruta");
-
-        var ruta = APP.Ruta.getRuta(function(camion, textStatus, jqXHR){
-            console.log(ruta);
-
-                APP.UI.mostrarRuta(ruta);
-
+    $(document).on('click', '#ruta', function(e){
+        APP.Ruta.getRuta(function(recorrido, textStatus, jqXHR){
+            console.log(recorrido);
+            APP.UI.mostrarRuta(recorrido);
         });
+    });
 
-
-        });
-
-        $(document).on('click', '#camion', function(e){
-            console.log("han hecho click en Camion");
+    $(document).on('click', '#camion', function(e){
         var camion = APP.Camion.getCamion(function(camion, textStatus, jqXHR){
-            console.log(camion);
-
-                APP.UI.mostrarCamion(camion);
-
+            APP.UI.mostrarCamion(camion);
         });
+    });
 
-
+    $(document).on('click', '#remolque', function(e){
+        var remolque = APP.Remolque.getRemolque(function(remolque, textStatus, jqXHR){
+            APP.UI.mostrarRemolque(remolque);
         });
-
-        $(document).on('click', '#remolque', function(e){
-            console.log("han hecho click en Remolque");
-
-            var remolque = APP.Remolque.getRemolque(function(remolque, textStatus, jqXHR){
-            console.log(remolque);
-
-                APP.UI.mostrarRemolque(remolque);
-
-
-
-        });
-
-});
+    });
 
 });

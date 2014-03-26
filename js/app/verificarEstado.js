@@ -40,7 +40,7 @@ APP.verificarEstado = (function(){
       return grados * (Math.PI/180);
     };
 
-    var calcularDistancia = function(punto1,punto2){
+    var calcularDistancia = function(punto1,punto2,ultimaPosicion){
       return Math.acos(Math.sin(toRadians(punto1.lat))*Math.sin(toRadians(punto2.lat))+Math.cos(toRadians(punto1.lat))*Math.cos(toRadians(punto2.lat))*Math.cos(toRadians(punto1.lng)-toRadians(punto2.lng)))*RMUNDO;
 
     };
@@ -49,7 +49,7 @@ APP.verificarEstado = (function(){
       var udist = calcularDistancia(posicionActual,recorrido[ultimaPosicion]);
       var nextdist = calcularDistancia(posicionActual,recorrido[ultimaPosicion+1]);
       while(nextdist<udist){
-        ultimaPosicion=ultimaPosicion++;
+        ultimaPosicion=ultimaPosicion+1;
         udist = nextdist;
         nextdist = calcularDistancia(posicionActual,recorrido[ultimaPosicion+1]);
       }
@@ -63,7 +63,6 @@ APP.verificarEstado = (function(){
     };
 
     var verificador = function(recorrido){
-      console.log("aaas");
       posicion(function(pos){
                   guardarPosicion(pos);
                   verificarPosicion(pos,ultimaPosicion,recorrido);
