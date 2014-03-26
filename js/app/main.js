@@ -3,13 +3,9 @@ $(function(){
 
 
     $(document).on('click', '#alertas', function(e){
-
         APP.Alertas.getAlertas(function(alertas, textStatus, jqXHR){
-
             if (alertas.alertas.length>0){
-
                 APP.UI.mostrarAlertas(alertas.alertas);
-
             } else APP.UI.esconderAlertas(alertas);
         });
     });
@@ -25,27 +21,28 @@ $(function(){
 
         });
 
-        v$(document).on('click', '#camion', function(e){
+        $(document).on('click', '#camion', function(e){
             console.log("han hecho click en Camion");
-        var camion = APP.Camion.getCamion();
-
-            console.log("hay camion");
-            APP.UI.mostrarCamion();
+        var camion = APP.Camion.getCamion(function(camion, textStatus, jqXHR){
             console.log(camion);
+
+                APP.UI.mostrarCamion(camion);
+
+        });
+
 
         });
 
         $(document).on('click', '#remolque', function(e){
             console.log("han hecho click en Remolque");
 
-
-               APP.Remolque.getRemolque(function(remolque, textStatus, jqXHR){
-
-            if (remolque.length>0){
+            var remolque = APP.Remolque.getRemolque(function(remolque, textStatus, jqXHR){
+            console.log(remolque);
 
                 APP.UI.mostrarRemolque(remolque);
 
-            }
+
+
         });
 
 });
