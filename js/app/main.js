@@ -14,7 +14,15 @@ $(function(){
         });
     });
 
-
+        $(document).on('click', '#conductor', function(e){
+            APP.Conductor.getConductor(function(conductor, textStatus, jqXHR){
+                if(conductor.length > 0){
+                    APP.UI.mostrarConcuctor(conductor);
+                }
+                else
+                    console.log(conductor);
+            });
+        });
 
         $(document).on('click', '#ruta', function(e){
             console.log("han hecho click en Ruta");
