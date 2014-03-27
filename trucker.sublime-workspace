@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"T",
+				"Tparado"
+			],
+			[
+				"pos",
+				"posicionActual"
+			],
+			[
+				"posicio",
+				"posicionActual"
+			],
+			[
+				"veri",
+				"verificarPosicion"
+			],
+			[
+				"posi",
+				"posicionActual"
+			],
+			[
+				"gur",
+				"guardarPosicion"
+			],
+			[
 				"lista",
 				"lista1"
 			],
@@ -188,10 +212,6 @@
 				"inline-block"
 			],
 			[
-				"pos",
-				"position"
-			],
-			[
 				"sty",
 				"list-style"
 			],
@@ -231,6 +251,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "js/app/verificarEstado.js",
+			"settings":
+			{
+				"buffer_size": 2903,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/app/main.js",
+			"settings":
+			{
+				"buffer_size": 1890,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -268,37 +304,22 @@
 	},
 	"file_history":
 	[
-<<<<<<< HEAD
-		"/home/daw/workspace/Trucker/data/ruta.json",
-		"/home/daw/workspace/Trucker/js/app/alertas.js",
 		"/home/daw/workspace/Trucker/js/app/ruta.js",
+		"/home/daw/workspace/Trucker/js/app/remolque.js",
+		"/home/daw/workspace/Trucker/data/ruta.json",
 		"/home/daw/workspace/Trucker/js/app/controlador.js",
+		"/home/daw/workspace/Trucker/js/app/conductor.js",
+		"/home/daw/workspace/Trucker/js/app/ui.js",
+		"/home/daw/workspace/Trucker/data/camion.json",
+		"/home/daw/workspace/Trucker/js/app/alertas.js",
 		"/home/daw/workspace/Trucker/js/app/verificarEstado.js",
 		"/home/daw/workspace/Trucker/index.html",
-		"/home/daw/workspace/Trucker/js/app/conductor.js",
 		"/home/daw/workspace/Trucker/js/app/main.js",
 		"/home/daw/workspace/Trucker/data/recorrido.kml",
 		"/home/daw/workspace/Trucker/js/verificarEstado.js",
 		"/home/daw/workspace/Trucker/js/main.js",
 		"/home/daw/workspace/Trucker/css/estilos.css",
 		"/home/daw/workspace/Trucker/.gitignore",
-=======
-		"/home/daw/workspace/Trucker/js/app/main.js",
-		"/home/daw/workspace/Trucker/js/verificarEstado.js",
-		"/home/daw/workspace/Trucker/README.md",
-		"/home/daw/workspace/Trucker/index.html",
-		"/home/daw/workspace/Trucker/js/app/verificarEstado.js",
-		"/home/daw/workspace/Trucker/js/main.js",
-		"/home/daw/workspace/Trucker/data/conductor.json",
-		"/home/daw/workspace/Trucker/js/app/camion.js",
-		"/home/daw/workspace/Trucker/data/ruta.json",
-		"/home/daw/workspace/Trucker/data/camion.json",
-		"/home/daw/workspace/Trucker/js/app/ruta.js",
-		"/home/daw/workspace/Trucker/js/app/conductor.js",
-		"/home/daw/workspace/Trucker/js/app/remolque.js",
-		"/home/daw/workspace/Trucker/data/remolque.json",
-		"/home/daw/Descargas/GR_180_Etapa_1-_Madrigal_de_la.kml",
->>>>>>> 93bfda5cbc30e8144884b7cf71dc4ea60b1d21ef
 		"/home/daw/workspace/DAM2014/AJAX/ej09/js/code.js",
 		"/home/daw/workspace/DAM2014/AJAX/ej07/js/code.js",
 		"/home/daw/workspace/DAM2014/AJAX/ej04/cliente/js/code.js",
@@ -394,7 +415,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -408,6 +429,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"conso",
+			"ultim",
+			"consol",
+			"con",
 			"each",
 			"intervalId",
 			"texto",
@@ -452,14 +477,75 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "js/app/verificarEstado.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2213,
+								2213
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1134.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/app/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								195,
+								195
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -495,7 +581,7 @@
 	"project": "trucker.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
