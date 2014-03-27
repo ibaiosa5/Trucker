@@ -72,16 +72,16 @@ APP.UI = (function(lng, undefined) {
         $ul.empty();
     };
 
-    /*var avisoAlertas = function(alertas) {
-        for (var i = 0; i < alertas.length; i++) {
-            //console.log(alertas[i].descripcion);
-            //alert(alertas[i].descripcion);
+    var avisoAlertas = function(nuevasAlertas) {
+        var alerta;
+        for (alerta in nuevasAlertas){
+            alert(nuevasAlertas[alerta].descripcion);
         }
-    };*/
+    };
 
-        var avisoTiempo = function(tiempo) {
+    var avisoTiempo = function(tiempo) {
 
-            console.log("estadoTiempo : " + tiempo);
+        console.log("estadoTiempo : " + tiempo);
 
     };
 
@@ -92,7 +92,7 @@ APP.UI = (function(lng, undefined) {
         mostrarRuta : mostrarRuta,
         mostrarCamion : mostrarCamion,
         mostrarRemolque : mostrarRemolque,
-        //avisoAlertas : avisoAlertas
+        avisoAlertas : avisoAlertas
     };
 
 })();
