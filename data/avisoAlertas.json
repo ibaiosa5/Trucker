@@ -1,8 +1,7 @@
-{ "alertas" : [
-        {
-        "idAlerta" : "00001",
-        "tipo" : "grave",
-        "descripcion" : "Hay un cambio de ruta!! Revisala"
-        }
-    ]
-}
+[
+    {
+    "idAlerta" : "00001",
+    "tipo" : "grave",
+    "descripcion" : "Hay un cambio de ruta!! Revisala"
+    }
+]
