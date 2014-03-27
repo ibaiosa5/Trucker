@@ -6,6 +6,7 @@ APP.Controller = (function() {
 
     var init = function() {
         intervaloAlertas = setInterval(APP.Controller.nuevasAlertas,5000);
+
     };
 
     var nuevasAlertas = function(e){
