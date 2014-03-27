@@ -41,6 +41,9 @@ APP.UI = (function(lng, undefined) {
         }
         console.log(waypts);
 
+        var divMap = $("<div id='map'></div>");
+        divMap.insertAfter($("#listaDatos"));
+
         $("#map").gmap3({
           getroute:{
             options:{
@@ -83,9 +86,18 @@ APP.UI = (function(lng, undefined) {
     */
     };
 
+    var eliminarMapa = function(){
+        $('#map').gmap3();
+        setTimeout(function(){
+            $('#map').gmap3('destroy').remove();
+            $('.googlemap').remove();
+        }, 100);
+    };
+
     var mostrarCamion = function(camion){
         console.log("Pintar camion");
         var $ul = $('#listaDatos');
+        eliminarMapa();
         $ul.empty();
         $ul.append('<li>Identificador: ' + camion.idCamion + '</li>');
         $ul.append('<li>Matricula: ' + camion.matricula + '</li>');
@@ -94,6 +106,7 @@ APP.UI = (function(lng, undefined) {
     var mostrarRemolque = function(remolque){
         console.log("Pintar remolque");
         var $ul = $('#listaDatos');
+        eliminarMapa();
         $ul.empty();
         $ul.append('<li>Identificador: ' + remolque.idRemolque + '</li>');
         $ul.append('<li>Matricula: ' + remolque.matricula + '</li>');
@@ -101,6 +114,7 @@ APP.UI = (function(lng, undefined) {
 
     var mostrarAlertas = function(alertas) {
         var $ul = $('#listaDatos');
+        eliminarMapa();
         $ul.empty();
         var lis = [];
         for (var i = 0; i < alertas.length; i++) {
@@ -112,6 +126,7 @@ APP.UI = (function(lng, undefined) {
 
     var mostrarConductor = function(conductor){
         var $ul = $('#listaDatos');
+        eliminarMapa();
         $ul.empty();
         $ul.append('<li>Identificador: ' + conductor.idConductor + '</li>');
         $ul.append('<li>Nombre: ' + conductor.nombre + '</li>');
