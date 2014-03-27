@@ -18,15 +18,6 @@ $(function(){
         });
     },5000);
 
-
-
-    $("#map").googleMap({
-      zoom: 10, // Initial zoom level (optional)
-      coords: [48.895651, 2.290569], // Map center (optional)
-      type: "ROADMAP" // Map type (optional)
-    });
-
-
     $(document).on('click', '#alertas', function(e){
         clearInterval(nuevasAlertas);
         APP.Alertas.getAlertas(function(alertas, textStatus, jqXHR){
