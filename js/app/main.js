@@ -26,11 +26,8 @@ $(function(){
 
 
 
-    $("#map").googleMap({
-      zoom: 10, // Initial zoom level (optional)
-      coords: [48.895651, 2.290569], // Map center (optional)
-      type: "ROADMAP" // Map type (optional)
-    });
+$("#map").gmap3();
+$("#map").width("600px").height("350px").gmap3();
 
 
     $(document).on('click', '#alertas', function(e){
@@ -43,15 +40,7 @@ $(function(){
 
 
 
-        $(document).on('click', '#ruta', function(e){
 
-        var ruta = APP.Ruta.getRuta(function(ruta, textStatus, jqXHR){
-            console.log(ruta);
-
-                APP.UI.mostrarRuta(ruta);
-
-});
-});
 
     $(document).on('click', '#conductor', function(e){
         APP.Conductor.getConductor(function(conductor, textStatus, jqXHR){

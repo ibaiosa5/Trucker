@@ -12,26 +12,79 @@ APP.UI = (function(lng, undefined) {
     };
 
     var mostrarRuta = function(ruta){
+
         console.log("Pintar ruta");
         var $ul = $('#listaDatos');
 
-        $("#map").addWay({
-        start: "15 avenue des champs Elysées 75008 Paris", // Postal address for the start marker (obligatory)
-        end:  [48.895651, 2.290569], // Postal Address or GPS coordinates for the end marker (obligatory)
-        route : 'way', // Block's ID for the route display (optional)
-        langage : 'english', // language of the route detail (optional)
-        step: [ // Array of steps (optional)
-            [48.85837009999999, 2.2944813000000295], // Postal Address or GPS coordinates of the step
-            "Porte Maillot, 75017 Paris" // Postal Address or GPS coordinates of the step
-        ]
-    });
+        var latOrigen = ruta[0].lng;
+        var lngOrigen = ruta[0].lat;
+        var latDestino = ruta[50].lng;
+        var lngDestino = ruta[50].lat;
+        var origen = new google.maps.LatLng(latOrigen, lngOrigen);
+        var destin = new google.maps.LatLng(latDestino, lngDestino);
+
+        console.log("origen");
+        console.log(origen);
+        console.log("destino");
+        console.log(destin);
+
+        var waypts = [];
+        for (var i = 1; i <= 8; i++)
+        {
+            var lat = ruta[i].lng;
+            var lngtemp = ruta[i].lat;
+            var coord = new google.maps.LatLng(lat, lngtemp);
+            waypts.push({
+                location:  coord,
+                stopover:true
+            });
+        }
+        console.log(waypts);
+
+        $("#map").gmap3({
+          getroute:{
+            options:{
+                origin:origen,
+                destination:destin,
+                travelMode: google.maps.DirectionsTravelMode.DRIVING,
+                waypoints:waypts
+            },
+            callback: function(results){
+              if (!results){
+                console.log("fallo del callback de la ruta");
+            return;
+        }
+              $(this).gmap3({
+                map:{
+                  options:{
+                    zoom: 13,
+                    center: [latOrigen,lngOrigen]
+                  }
+                },
+                directionsrenderer:{
+                    container: $(document.createElement("div")).addClass("googlemap").insertAfter($("#map")),
+                  options:{
+                    directions:results
+                  }
+                }
+              });
+            }
+          }
+        });
+
+
+
         $ul.empty();
-        var lis = [];
+        /*var lis = [];
         for (var i = 0; i < ruta.length-1; i++) {
             lis.push('<li>Lat: ' + ruta[i].lat + ', Lng: ' + ruta[i].lng + '</li>');
         }
         $ul.append(lis);
+    */
     };
+
+
+
     var mostrarCamion = function(camion){
         console.log("Pintar camion");
         var $ul = $('#listaDatos');
