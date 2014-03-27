@@ -53,10 +53,10 @@ APP.verificarEstado = (function(){
         nextdist = calcularDistancia(posicionActual,recorrido[ultimaPosRuta+1]);
       }
       if(udist<RANGO){
-        console.log("dentro de la ruta");
+        console.log("Dentro de la ruta");
       }
       else{
-        console.log("Has salido de la ruta");
+        console.log("Fuera de la ruta");
       }
 
     };
