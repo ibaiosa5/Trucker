@@ -2,6 +2,12 @@ var APP = APP||{};
 APP.Controller = (function() {
     "use strict";
 
+    var intervaloAlertas;
+
+    var init = function() {
+        intervaloAlertas = setInterval(APP.Controller.nuevasAlertas,5000);
+    };
+
     var nuevasAlertas = function(e){
         APP.Pedir.getInfo(function(nuevasAlertas, textStatus, jqXHR){
             if (nuevasAlertas.length > 0){
@@ -11,7 +17,8 @@ APP.Controller = (function() {
     };
 
     var listaAlertas = function(e){
-        clearInterval(nuevasAlertas);
+
+        clearInterval(intervaloAlertas);
         APP.Pedir.getInfo(function(alertas, textStatus, jqXHR){
             if (alertas.length > 0){
                 APP.UI.mostrarAlertas(alertas);
@@ -20,9 +27,9 @@ APP.Controller = (function() {
     };
 
 
-
      return {
         listaAlertas : listaAlertas,
-        nuevasAlertas : nuevasAlertas
+        nuevasAlertas : nuevasAlertas,
+        init : init
     };
 })();

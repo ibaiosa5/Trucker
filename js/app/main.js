@@ -10,7 +10,9 @@ $(function(){
         },5000);
     });
 
-    var nuevasAlertas = setInterval(APP.Controller.nuevasAlertas,5000);
+    APP.Controller.init();
+
+
 
 
 
