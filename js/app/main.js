@@ -28,10 +28,10 @@ $(function(){
     });
 
     $(document).on('click', '#conductor', function(e){
-        APP.Conductor.getConductor(function(conductor, textStatus, jqXHR){
+        APP.Pedir.getInfo(function(conductor, textStatus, jqXHR){
+            console.log(conductor);
             APP.UI.mostrarConductor(conductor);
-
-        });
+        }, 'data/conductor.json');
     });
 
     $(document).on('click', '#ruta', function(e){
@@ -42,15 +42,15 @@ $(function(){
     });
 
     $(document).on('click', '#camion', function(e){
-        var camion = APP.Camion.getCamion(function(camion, textStatus, jqXHR){
+        APP.Pedir.getInfo(function(camion, textStatus, jqXHR){
             APP.UI.mostrarCamion(camion);
-        });
+        }, 'data/camion.json');
     });
 
     $(document).on('click', '#remolque', function(e){
-        var remolque = APP.Remolque.getRemolque(function(remolque, textStatus, jqXHR){
+        APP.Pedir.getInfo(function(remolque, textStatus, jqXHR){
             APP.UI.mostrarRemolque(remolque);
-        });
+        }, 'data/remolque.json');
     });
 
 });
