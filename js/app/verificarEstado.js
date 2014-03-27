@@ -5,12 +5,10 @@ APP.verificarEstado = (function(){
   var RANGO = 100;
   var RMUNDO = 6371000;
   var posicionActual;
-  var ultimaPosicion = 0;
-  var ruta = [];
+  var ultimaPosRuta = 0;
+  var miRuta = [];
   var Tparado = 0;
   var Tmarcha = 0;
-
-  //Tiempo
   var estado = "parado";
 
     var posicion = function(callback){
@@ -35,7 +33,7 @@ APP.verificarEstado = (function(){
       };
 
     var guardarPosicion=function(pos){
-      ruta.push(pos);
+      miRuta.push(pos);
     };
 
     var toRadians = function(grados){
@@ -47,14 +45,12 @@ APP.verificarEstado = (function(){
     };
 
     var verificarPosicion = function(posicionActual,recorrido){
-      var udist = calcularDistancia(posicionActual,recorrido[ultimaPosicion]);
-      var nextdist = calcularDistancia(posicionActual,recorrido[ultimaPosicion++]);
-      console.log(udist);
-      console.log(nextdist);
+      var udist = calcularDistancia(posicionActual,recorrido[ultimaPosRuta]);
+      var nextdist = calcularDistancia(posicionActual,recorrido[ultimaPosRuta+1]);
       while(nextdist<udist){
-        ultimaPosicion=ultimaPosicion++;
         udist = nextdist;
-        nextdist = calcularDistancia(posicionActual,recorrido[ultimaPosicion++]);
+        ultimaPosRuta++;
+        nextdist = calcularDistancia(posicionActual,recorrido[ultimaPosRuta+1]);
       }
       if(udist<RANGO){
         console.log("dentro de la ruta");
@@ -65,26 +61,29 @@ APP.verificarEstado = (function(){
 
     };
 
-    var verificarTiempo = function(estado){
+    var verificarTiempo = function(){
       if(estado == 'parado'){
-        console.log('parado');
-        if((ruta.length>0) && (calcularDistancia(ruta[ultimaPosicion],ruta[ultimaPosicion-1]))>0){//si en 5 segundos se ha movido algo se pasa del estado parado a moviendo
+        if((miRuta.length>1) && (calcularDistancia(miRuta[miRuta.length-1],miRuta[miRuta.length-2])>10)){//si en 5 segundos se ha movido algo se pasa del estado parado a moviendo
           estado = 'en marcha';
+          console.log('se ha puesto en marcha');
           Tmarcha = 0;
           Tparado = 0;
         }
         else{
+          console.log('parado');
           Tparado++;
         }
+
       }
       else if(estado == 'en marcha'){
-        console.log('en marcha');
-        if((ruta.length>0) && (calcularDistancia(ruta[ultimaPosicion],ruta[ultimaPosicion-35]))<10){//si en 3 minutos no se ha movido se cambia el estado a parado
+        if((miRuta.length>24) && (calcularDistancia(miRuta[miRuta.length-1],miRuta[miRuta.length-23])<10)){//si en 2 minutos no se ha movido se cambia el estado a parado
+          console.log('se ha parado');
           estado = 'parado';
           Tmarcha = 0;
           Tparado = 0;
         }
         else{
+          console.log('en marcha');
           Tmarcha++;
         }
       }
@@ -92,9 +91,13 @@ APP.verificarEstado = (function(){
 
     var verificador = function(recorrido){
       posicion(function(pos){
+                  /*pos = {
+                              'lat' : -5.3557161854666,
+                              'lng' : 40.151587223058
+                              };*/
                   guardarPosicion(pos);
                   verificarPosicion(pos,recorrido);
-                  verificarTiempo(estado);
+                  verificarTiempo();
               });
     };
     return {
