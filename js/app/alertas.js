@@ -14,13 +14,13 @@ APP.Alertas = (function(){
 
     };
 
-    var hayAlertas = function(devolverDatos){
+    var hayAlertas = function(devolverAlertas){
 
         $.ajax({
                 url : 'data/avisoAlertas.json',
                 cache : false,
                 dataType : 'json',
-                success : devolverDatos,
+                success : devolverAlertas,
                 error : errorAjax
         });
 
