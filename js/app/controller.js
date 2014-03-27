@@ -9,6 +9,12 @@ APP.Controller = (function() {
 
     };
 
+    /*$(document).on('click', '.tabs li', function(e){
+        var $this = $(this);
+        $this.addClass('current').siblings('.current').removeClass('current');
+        $this.data('target').show().siblings('.module').hide();
+    });*/
+
     var nuevasAlertas = function(e){
         APP.Pedir.getInfo(function(nuevasAlertas, textStatus, jqXHR){
             if (nuevasAlertas.length > 0){
@@ -18,7 +24,7 @@ APP.Controller = (function() {
     };
 
     var listaAlertas = function(e){
-
+        APP.UI.mostrarActivo(this);
         clearInterval(intervaloAlertas);
         APP.Pedir.getInfo(function(alertas, textStatus, jqXHR){
             if (alertas.length > 0){
@@ -28,12 +34,14 @@ APP.Controller = (function() {
     };
 
     var showDriver = function(e){
+        APP.UI.mostrarActivo(this);
         APP.Pedir.getInfo(function(conductor, textStatus, jqXHR){
             APP.UI.mostrarConductor(conductor);
         }, 'data/conductor.json');
     };
 
     var showRuta = function(e){
+        APP.UI.mostrarActivo(this);
         APP.Ruta.getRuta(function(recorrido, textStatus, jqXHR){
             console.log(recorrido);
             APP.UI.mostrarRuta(recorrido);
@@ -41,12 +49,14 @@ APP.Controller = (function() {
     };
 
     var showCamion = function(e){
+        APP.UI.mostrarActivo(this);
         APP.Pedir.getInfo(function(camion, textStatus, jqXHR){
             APP.UI.mostrarCamion(camion);
         }, 'data/camion.json');
     };
 
     var showRemolque = function(e){
+        APP.UI.mostrarActivo(this);
         APP.Pedir.getInfo(function(remolque, textStatus, jqXHR){
             APP.UI.mostrarRemolque(remolque);
         }, 'data/remolque.json');

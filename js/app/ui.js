@@ -73,7 +73,11 @@ APP.UI = (function(lng, undefined) {
     var avisoTiempo = function(tiempo) {
 
         console.log("estadoTiempo : " + tiempo);
+    };
 
+    var mostrarActivo = function(li){
+        var $li = $(li);
+        $li.addClass('active').siblings('.active').removeClass('active');
     };
 
     return {
@@ -83,7 +87,8 @@ APP.UI = (function(lng, undefined) {
         mostrarRuta : mostrarRuta,
         mostrarCamion : mostrarCamion,
         mostrarRemolque : mostrarRemolque,
-        avisoAlertas : avisoAlertas
+        avisoAlertas : avisoAlertas,
+        mostrarActivo : mostrarActivo
     };
 
 })();
