@@ -1,6 +1,6 @@
 $(function(){
         console.log("entro");
-        $(document).on('click', '#conductor', Controller.showDriver);
+        $(document).on('click', '#conductor', APP.Controller.showDriver);
 
 
 });
