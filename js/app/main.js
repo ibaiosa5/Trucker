@@ -43,10 +43,10 @@ $(function(){
         });
 
     $(document).on('click', '#conductor', function(e){
-        APP.Conductor.getConductor(function(conductor, textStatus, jqXHR){
+        APP.Pedir.getInfo(function(conductor, textStatus, jqXHR){
             APP.UI.mostrarConductor(conductor);
 
-        });
+        }, 'data/conductor.json');
     });
 
     $(document).on('click', '#ruta', function(e){
