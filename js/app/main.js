@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 69ccd079416e23bf6fe5b8f6fa223e752401966d
 $(function(){
     "use strict";
     var recorrido;
