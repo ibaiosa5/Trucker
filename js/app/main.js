@@ -1,4 +1,6 @@
-$(function(){
+
+var APP = APP||{};
+APP.Controller = (function(){
     "use strict";
     var recorrido;
     var idPosicionInterval;
@@ -27,12 +29,11 @@ $(function(){
         });
     });
 
-    $(document).on('click', '#conductor', function(e){
+    var showDriver = function(e){
         APP.Pedir.getInfo(function(conductor, textStatus, jqXHR){
-            console.log(conductor);
             APP.UI.mostrarConductor(conductor);
         }, 'data/conductor.json');
-    });
+    };
 
     $(document).on('click', '#ruta', function(e){
         APP.Ruta.getRuta(function(recorrido, textStatus, jqXHR){
@@ -53,4 +54,4 @@ $(function(){
         }, 'data/remolque.json');
     });
 
-});
+})();
