@@ -1,5 +1,4 @@
-
-(function(){
+$(function(){
     "use strict";
     var recorrido;
     var idPosicionInterval;
@@ -12,7 +11,5 @@
     });
 
     APP.Controller.init();
-
-
 
 });
