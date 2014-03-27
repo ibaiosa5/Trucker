@@ -18,15 +18,6 @@ $(function(){
         });
     },5000);
 
-
-
-    $("#map").googleMap({
-      zoom: 10, // Initial zoom level (optional)
-      coords: [48.895651, 2.290569], // Map center (optional)
-      type: "ROADMAP" // Map type (optional)
-    });
-
-
     $(document).on('click', '#alertas', function(e){
         clearInterval(nuevasAlertas);
         APP.Alertas.getAlertas(function(alertas, textStatus, jqXHR){
@@ -38,8 +29,8 @@ $(function(){
 
     $(document).on('click', '#conductor', function(e){
         APP.Pedir.getInfo(function(conductor, textStatus, jqXHR){
+            console.log(conductor);
             APP.UI.mostrarConductor(conductor);
-
         }, 'data/conductor.json');
     });
 
@@ -51,15 +42,15 @@ $(function(){
     });
 
     $(document).on('click', '#camion', function(e){
-        var camion = APP.Camion.getCamion(function(camion, textStatus, jqXHR){
+        APP.Pedir.getInfo(function(camion, textStatus, jqXHR){
             APP.UI.mostrarCamion(camion);
-        });
+        }, 'data/camion.json');
     });
 
     $(document).on('click', '#remolque', function(e){
-        var remolque = APP.Remolque.getRemolque(function(remolque, textStatus, jqXHR){
+        APP.Pedir.getInfo(function(remolque, textStatus, jqXHR){
             APP.UI.mostrarRemolque(remolque);
-        });
+        }, 'data/remolque.json');
     });
 
 });
