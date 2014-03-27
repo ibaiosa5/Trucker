@@ -1,6 +1,5 @@
 var APP = APP || {};
 
-
 APP.verificarEstado = (function(){
   var RANGO = 100;
   var RMUNDO = 6371000;
@@ -10,6 +9,7 @@ APP.verificarEstado = (function(){
   var Tparado = 0;
   var Tmarcha = 0;
   var estado = "parado";
+
 
     var posicion = function(callback){
         var options = {
@@ -45,18 +45,23 @@ APP.verificarEstado = (function(){
     };
 
     var verificarPosicion = function(posicionActual,recorrido){
-      var udist = calcularDistancia(posicionActual,recorrido[ultimaPosRuta]);
-      var nextdist = calcularDistancia(posicionActual,recorrido[ultimaPosRuta+1]);
-      while(nextdist<udist){
-        udist = nextdist;
-        ultimaPosRuta++;
-        nextdist = calcularDistancia(posicionActual,recorrido[ultimaPosRuta+1]);
-      }
-      if(udist<RANGO){
-        console.log("Dentro de la ruta");
-      }
-      else{
-        console.log("Fuera de la ruta");
+      var dist =[];
+
+      if(ultimaPosRuta<recorrido.length-2){
+        var udist = calcularDistancia(posicionActual,recorrido[ultimaPosRuta]);
+        var nextdist = calcularDistancia(posicionActual,recorrido[ultimaPosRuta+1]);
+        while(nextdist<udist){
+          udist = nextdist;
+          ultimaPosRuta++;
+          nextdist = calcularDistancia(posicionActual,recorrido[ultimaPosRuta+1]);
+        }
+        if(udist<RANGO){
+          console.log("Dentro de la ruta");
+        }
+        else{
+          console.log("Fuera de la ruta");
+        }
+
       }
 
     };
@@ -66,6 +71,7 @@ APP.verificarEstado = (function(){
         if((miRuta.length>1) && (calcularDistancia(miRuta[miRuta.length-1],miRuta[miRuta.length-2])>10)){//si en 5 segundos se ha movido algo se pasa del estado parado a moviendo
           estado = 'en marcha';
           console.log('se ha puesto en marcha');
+          //TO DO se deberia de enviar una alerta al servidor
           Tmarcha = 0;
           Tparado = 0;
         }
@@ -78,6 +84,7 @@ APP.verificarEstado = (function(){
       else if(estado == 'en marcha'){
         if((miRuta.length>24) && (calcularDistancia(miRuta[miRuta.length-1],miRuta[miRuta.length-23])<10)){//si en 2 minutos no se ha movido se cambia el estado a parado
           console.log('se ha parado');
+          //TO DO se deberia de enviar una alerta al servidor
           estado = 'parado';
           Tmarcha = 0;
           Tparado = 0;
@@ -91,10 +98,6 @@ APP.verificarEstado = (function(){
 
     var verificador = function(recorrido){
       posicion(function(pos){
-                  /*pos = {
-                              'lat' : -5.3557161854666,
-                              'lng' : 40.151587223058
-                              };*/
                   guardarPosicion(pos);
                   verificarPosicion(pos,recorrido);
                   verificarTiempo();
