@@ -15,16 +15,6 @@ APP.UI = (function(lng, undefined) {
         console.log("Pintar ruta");
         var $ul = $('#listaDatos');
 
-        $("#map").addWay({
-        start: "15 avenue des champs Elysées 75008 Paris", // Postal address for the start marker (obligatory)
-        end:  [48.895651, 2.290569], // Postal Address or GPS coordinates for the end marker (obligatory)
-        route : 'way', // Block's ID for the route display (optional)
-        langage : 'english', // language of the route detail (optional)
-        step: [ // Array of steps (optional)
-            [48.85837009999999, 2.2944813000000295], // Postal Address or GPS coordinates of the step
-            "Porte Maillot, 75017 Paris" // Postal Address or GPS coordinates of the step
-        ]
-    });
         $ul.empty();
         var lis = [];
         for (var i = 0; i < ruta.length-1; i++) {
@@ -32,6 +22,7 @@ APP.UI = (function(lng, undefined) {
         }
         $ul.append(lis);
     };
+
     var mostrarCamion = function(camion){
         console.log("Pintar camion");
         var $ul = $('#listaDatos');
