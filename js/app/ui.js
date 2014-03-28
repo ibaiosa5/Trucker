@@ -15,6 +15,9 @@ APP.UI = (function(lng, undefined) {
 
         console.log("Pintar ruta");
         var $ul = $('#listaDatos');
+        $ul.empty();
+        var $divListado = $('#listado');
+        $divListado.remove();
 
         var latOrigen = ruta[0].lng;
         var lngOrigen = ruta[0].lat;
@@ -75,8 +78,6 @@ APP.UI = (function(lng, undefined) {
           }
         });
 
-
-
         $ul.empty();
         /*var lis = [];
         for (var i = 0; i < ruta.length-1; i++) {
@@ -99,38 +100,52 @@ APP.UI = (function(lng, undefined) {
         var $ul = $('#listaDatos');
         eliminarMapa();
         $ul.empty();
-        $ul.append('<li>Identificador: ' + camion.idCamion + '</li>');
-        $ul.append('<li>Matricula: ' + camion.matricula + '</li>');
+        var $divListado = $('#listado');
+        $divListado.remove();
+        var divListaCamion = $("<div id='listado' class='list-group'><a href='#'' class='list-group-item'>Identificador: " + camion.idCamion + "</a><a href='#'' id='listado' class='list-group-item'>Matricula: " + camion.matricula + "</a></div>");
+        divListaCamion.insertAfter($("#listaDatos"));
     };
 
     var mostrarRemolque = function(remolque){
         console.log("Pintar remolque");
-        var $ul = $('#listaDatos');
+
         eliminarMapa();
-        $ul.empty();
-        $ul.append('<li>Identificador: ' + remolque.idRemolque + '</li>');
-        $ul.append('<li>Matricula: ' + remolque.matricula + '</li>');
+        var $divListado = $('#listado');
+        $divListado.remove();
+        var divListaRemolque = $("<div id='listado' class='list-group'><a href='#'' class='list-group-item'>Identificador: " + remolque.idRemolque + "</a><a href='#'' id='listado' class='list-group-item'>Matricula: " + remolque.matricula + "</a></div>");
+        divListaRemolque.insertAfter($("#listaDatos"));
     };
 
     var mostrarAlertas = function(alertas) {
         var $ul = $('#listaDatos');
         eliminarMapa();
+        var $divListado = $('#listado');
+        $divListado.remove();
         $ul.empty();
-        var lis = [];
-        for (var i = 0; i < alertas.length; i++) {
-            var $li = createElement(alertas[i].descripcion);
-            lis.push($li);
+
+        var divListadoAlertas ="";
+        divListadoAlertas+="<div id='listado' class='list-group'>";
+        for (var j = 0; j < alertas.length; j++) {
+            var $lin = "<a href='#'' class='list-group-item list-group-item-danger'>" + alertas[j].descripcion;
+            divListadoAlertas+= $lin;
         }
-        $ul.append(lis);
+        divListadoAlertas+="</div>";
+        var listadoObjeto = $(divListadoAlertas);
+        console.log(listadoObjeto);
+        listadoObjeto.insertAfter($("#listaDatos"));
     };
 
     var mostrarConductor = function(conductor){
         var $ul = $('#listaDatos');
         eliminarMapa();
+        var $divListado = $('#listado');
+        $divListado.remove();
+        var divListaCamion = $("<div id='listado' class='list-group'>"+
+            "<a href='#'' class='list-group-item'>Identificador: " + conductor.idConductor +
+            "</a><a href='#'' id='listado' class='list-group-item'>Nombre: " + conductor.nombre +
+            "</a><a href='#'' class='list-group-item'>Apellido: " + conductor.apellido + "</a></div>");
+        divListaCamion.insertAfter($("#listaDatos"));
         $ul.empty();
-        $ul.append('<li>Identificador: ' + conductor.idConductor + '</li>');
-        $ul.append('<li>Nombre: ' + conductor.nombre + '</li>');
-        $ul.append('<li>Apellido: ' + conductor.apellido + '</li>');
     };
 
     var esconderAlertas = function(alertas) {
