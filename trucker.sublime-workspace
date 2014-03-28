@@ -4,7 +4,10 @@
 		"selected_items":
 		[
 			[
-<<<<<<< HEAD
+				"le",
+				"length-1"
+			],
+			[
 				"leng",
 				"length-1"
 			],
@@ -15,30 +18,6 @@
 			[
 				"muestra",
 				"muestraRuta"
-=======
-				"T",
-				"Tparado"
-			],
-			[
-				"pos",
-				"posicionActual"
-			],
-			[
-				"posicio",
-				"posicionActual"
-			],
-			[
-				"veri",
-				"verificarPosicion"
-			],
-			[
-				"posi",
-				"posicionActual"
-			],
-			[
-				"gur",
-				"guardarPosicion"
->>>>>>> 22de4d36211bd489cdc3641070499f060a47f270
 			],
 			[
 				"lista",
@@ -103,10 +82,6 @@
 			[
 				"enlace",
 				"enlaces"
-			],
-			[
-				"le",
-				"length"
 			],
 			[
 				"enal",
@@ -225,6 +200,10 @@
 				"inline-block"
 			],
 			[
+				"pos",
+				"position"
+			],
+			[
 				"sty",
 				"list-style"
 			],
@@ -265,64 +244,10 @@
 	"buffers":
 	[
 		{
-<<<<<<< HEAD
-			"file": "js/app/main.js",
-			"settings":
-			{
-				"buffer_size": 1639,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/app/ruta.js",
-			"settings":
-			{
-				"buffer_size": 2202,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/app/verificarEstado.js",
-			"settings":
-			{
-				"buffer_size": 2088,
-=======
-			"file": "js/app/verificarEstado.js",
-			"settings":
-			{
-				"buffer_size": 2903,
->>>>>>> 22de4d36211bd489cdc3641070499f060a47f270
-				"line_ending": "Unix"
-			}
-		},
-		{
-<<<<<<< HEAD
-			"file": "js/app/ui.js",
-			"settings":
-			{
-				"buffer_size": 3307,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1555,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/app/camion.js",
-			"settings":
-			{
-				"buffer_size": 534,
-=======
-			"file": "js/app/main.js",
-			"settings":
-			{
-				"buffer_size": 1890,
->>>>>>> 22de4d36211bd489cdc3641070499f060a47f270
+				"buffer_size": 2200,
 				"line_ending": "Unix"
 			}
 		}
@@ -363,43 +288,29 @@
 	},
 	"file_history":
 	[
-<<<<<<< HEAD
+		"/home/daw/workspace/Trucker/index.html",
+		"/home/daw/workspace/Trucker/js/app/ui.js",
+		"/home/daw/workspace/Trucker/css/estilos.css",
+		"/home/daw/workspace/Trucker/js/app/main.js",
+		"/home/daw/workspace/Trucker/js/app/verificarEstado.js",
+		"/home/daw/workspace/Trucker/js/app/ruta.js",
+		"/home/daw/workspace/Trucker/js/app/camion.js",
+		"/home/daw/workspace/Trucker/js/temporal.js",
+		"/home/daw/Descargas/GR_10_Etapa_7__Itinerario_desde.kml",
+		"/home/daw/Descargas/CHOPOSMONUMENTALES.kml",
 		"/home/daw/Descargas/gmap3v5.1.1/gmap3.js",
 		"/home/daw/workspace/Trucker/js/Tilotiti/jquery.googlemap.js",
 		"/home/daw/workspace/Trucker/js/app/controlador.js",
-		"/home/daw/workspace/Trucker/js/app/camion.js",
 		"/home/daw/workspace/Trucker/data/remolque.json",
-		"/home/daw/workspace/Trucker/js/app/main.js",
 		"/home/daw/workspace/Trucker/js/verificarEstado.js",
 		"/home/daw/workspace/Trucker/README.md",
-		"/home/daw/workspace/Trucker/index.html",
-		"/home/daw/workspace/Trucker/js/app/verificarEstado.js",
 		"/home/daw/workspace/Trucker/js/main.js",
 		"/home/daw/workspace/Trucker/data/conductor.json",
 		"/home/daw/workspace/Trucker/data/ruta.json",
 		"/home/daw/workspace/Trucker/data/camion.json",
-		"/home/daw/workspace/Trucker/js/app/ruta.js",
 		"/home/daw/workspace/Trucker/js/app/conductor.js",
 		"/home/daw/workspace/Trucker/js/app/remolque.js",
 		"/home/daw/Descargas/GR_180_Etapa_1-_Madrigal_de_la.kml",
-=======
-		"/home/daw/workspace/Trucker/js/app/ruta.js",
-		"/home/daw/workspace/Trucker/js/app/remolque.js",
-		"/home/daw/workspace/Trucker/data/ruta.json",
-		"/home/daw/workspace/Trucker/js/app/controlador.js",
-		"/home/daw/workspace/Trucker/js/app/conductor.js",
-		"/home/daw/workspace/Trucker/js/app/ui.js",
-		"/home/daw/workspace/Trucker/data/camion.json",
-		"/home/daw/workspace/Trucker/js/app/alertas.js",
-		"/home/daw/workspace/Trucker/js/app/verificarEstado.js",
-		"/home/daw/workspace/Trucker/index.html",
-		"/home/daw/workspace/Trucker/js/app/main.js",
-		"/home/daw/workspace/Trucker/data/recorrido.kml",
-		"/home/daw/workspace/Trucker/js/verificarEstado.js",
-		"/home/daw/workspace/Trucker/js/main.js",
-		"/home/daw/workspace/Trucker/css/estilos.css",
-		"/home/daw/workspace/Trucker/.gitignore",
->>>>>>> 22de4d36211bd489cdc3641070499f060a47f270
 		"/home/daw/workspace/DAM2014/AJAX/ej09/js/code.js",
 		"/home/daw/workspace/DAM2014/AJAX/ej07/js/code.js",
 		"/home/daw/workspace/DAM2014/AJAX/ej04/cliente/js/code.js",
@@ -510,16 +421,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-<<<<<<< HEAD
 			"region: \"fr\"",
 			"fr",
 			"interval",
-=======
-			"conso",
-			"ultim",
-			"consol",
-			"con",
->>>>>>> 22de4d36211bd489cdc3641070499f060a47f270
 			"each",
 			"intervalId",
 			"texto",
@@ -564,51 +468,16 @@
 	"groups":
 	[
 		{
-<<<<<<< HEAD
-			"selected": 3,
-=======
-			"selected": 1,
->>>>>>> 22de4d36211bd489cdc3641070499f060a47f270
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-<<<<<<< HEAD
-					"file": "js/app/main.js",
-					"semi_transient": false,
+					"file": "index.html",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1639,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								474,
-								474
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 306.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/app/ruta.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2202,
+						"buffer_size": 2200,
 						"regions":
 						{
 						},
@@ -621,176 +490,16 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-=======
->>>>>>> 22de4d36211bd489cdc3641070499f060a47f270
-					"file": "js/app/verificarEstado.js",
-					"semi_transient": false,
-					"settings":
-					{
-<<<<<<< HEAD
-						"buffer_size": 2088,
-=======
-						"buffer_size": 2903,
->>>>>>> 22de4d36211bd489cdc3641070499f060a47f270
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-<<<<<<< HEAD
-								1969,
-								1969
-=======
-								2213,
-								2213
->>>>>>> 22de4d36211bd489cdc3641070499f060a47f270
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-<<<<<<< HEAD
-						"translation.y": 561.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "js/app/ui.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3307,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								951,
-								951
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 300.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1555,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1334,
-								1334
-							]
-						],
-						"settings":
-						{
 							"is_xml": false,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 102.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "js/app/camion.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 534,
-=======
-						"translation.y": 1134.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/app/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1890,
->>>>>>> 22de4d36211bd489cdc3641070499f060a47f270
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-<<<<<<< HEAD
-								534,
-								534
-=======
-								195,
-								195
->>>>>>> 22de4d36211bd489cdc3641070499f060a47f270
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-<<<<<<< HEAD
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-=======
-						"translation.x": -0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
->>>>>>> 22de4d36211bd489cdc3641070499f060a47f270
 					"type": "text"
 				}
 			]
@@ -798,7 +507,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -834,7 +543,7 @@
 	"project": "trucker.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":

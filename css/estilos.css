@@ -1,8 +1,10 @@
-li:focus{
-
-}
-
 #map{
  height: 350px;
  width: 600px;
+ margin: 0 auto;
+}
+
+.googlemap{
+ width: 600px;
+ margin: 0 auto;
 }
