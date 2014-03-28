@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"divlis",
+				"divListadoAlertas"
+			],
+			[
 				"le",
 				"length-1"
 			],
@@ -243,14 +247,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 2200,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -288,9 +284,9 @@
 	},
 	"file_history":
 	[
-		"/home/daw/workspace/Trucker/index.html",
 		"/home/daw/workspace/Trucker/js/app/ui.js",
 		"/home/daw/workspace/Trucker/css/estilos.css",
+		"/home/daw/workspace/Trucker/index.html",
 		"/home/daw/workspace/Trucker/js/app/main.js",
 		"/home/daw/workspace/Trucker/js/app/verificarEstado.js",
 		"/home/daw/workspace/Trucker/js/app/ruta.js",
@@ -468,40 +464,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2200,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
